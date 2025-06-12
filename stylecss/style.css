@@ -1,0 +1,470 @@
+:root {
+  --color-navy: #001f3f;
+  --color-grey: #f0f0f0;
+  --color-white: #ffffff;
+  --color-gold: #ffd700;
+}
+
+/* RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html, body {
+  height: 100%;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  color: var(--color-navy);
+  background: var(--color-white);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: var(--color-navy);
+}
+p {
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: var(--color-navy);
+}
+
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: var(--color-navy);
+  color: var(--color-white);
+  z-index: 100;
+  transition: background 0.3s, color 0.3s;
+}
+nav.scrolled {
+  background: var(--color-white);
+  color: var(--color-navy);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.logo-container h1 {
+  font-size: 1.75rem;
+  color: var(--color-gold);
+}
+.hamburger-icon {
+  font-size: 1.75rem;
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+/* SIDE NAV */
+.sidenav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--color-navy);
+  overflow-x: hidden;
+  transition: width 0.3s;
+  padding-top: 4rem;
+}
+.sidenav a {
+  display: block;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  color: var(--color-grey);
+  transition: color 0.2s;
+}
+.sidenav a:hover {
+  color: var(--color-white);
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+/* HERO / DYNAMIC BG */
+.dynamic-bg-container {
+  background: url('../assets/palace.jpeg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+/* constrain the text block */
+.dynamic-bg-container .hero-content {
+
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.5); 
+  margin-left: 3rem;
+  border-radius: 6px;
+  max-width: 600px;
+
+}
+
+/* H2: white text, gold underline */
+.dynamic-bg-container .hero-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  display: inline-block;              /* for border to hug text */
+  border-bottom: 4px solid var(--color-gold);
+  padding-bottom: 0.25rem;
+}
+
+/* P: white text with white border */
+.dynamic-bg-container .hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: var(--color-white);
+  /* border: 1px solid var(--color-white); */
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+/* Button remains as before */
+.dynamic-bg-container .hero-content button {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.dynamic-bg-container .hero-content button:hover {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+  .dynamic-bg-container .hero-content {
+    margin-left: 1rem;
+    max-width: 90%;
+    max-height: 80vh; 
+    padding: 1.5rem;
+  }
+  .dynamic-bg-container .hero-content h2 {
+    font-size: 2rem;
+  }
+}
+
+
+/* SOLUTIONS / FEATURES */
+.solutions-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 14rem 2rem;
+  background: var(--color-grey);
+}
+.solutions-container .ai-consulting,
+.solutions-container .cloud-integration {
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  max-width: 500px;     /* caps each card at 300px */
+  width: 100%;          /* lets them shrink below 300px on small screens */
+  margin: 0 auto;       /* center within the grid cell */
+}
+.solutions-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+}
+.solutions-container p {
+  margin-bottom: 1rem;
+  color: var(--color-navy);
+}
+.solutions-container a {
+  font-weight: bold;
+  color: var(--color-gold);
+  position: relative;
+}
+.solutions-container a::after {
+  content: ' →';
+  font-weight: normal;
+}
+
+/* CTA */
+.contact-cta-container {
+  text-align: center;
+  background: var(--color-navy);
+  color: var(--color-white);
+  padding: 14rem 2rem;
+}
+.contact-cta-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.contact-cta-container p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+.contact-cta-container button {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contact-cta-container button:hover {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+/* ABOUT / WHAT WE DO */
+.about-section {
+  background: url('../assets/hanokvillage.jpeg') center/cover no-repeat fixed;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 8rem 2rem;
+}
+.about-content {
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  padding: 2rem;
+  border-radius: 6px;
+  max-width: 600px;
+}
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.about-content p {
+  font-size: 1.1rem;
+}
+
+
+/* HISTORY: left-aligned text block */
+.history-section {
+  background: var(--color-grey);
+  min-height: 100vh;           /* full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* text on the left */
+  padding: 8rem 2rem;
+}
+
+/* PURPOSE: right-aligned text block */
+.purpose-section {
+  background: var(--color-white);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+}
+
+.purpose-content {
+  text-align: left;    
+}
+
+.purpose-content button {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1.5rem;         /* space above the button */
+  transition: background 0.2s, color 0.2s;
+}
+
+.purpose-content button:hover {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+/* Shared text-block styling */
+.history-content,
+.purpose-content {
+  color: var(--color-navy);
+  padding: 2rem;
+  border-radius: 6px;
+  max-width: 600px;            /* keeps the box from stretching too wide */
+}
+
+/* Ensure Purpose text reads right-aligned inside its box */
+.purpose-content {
+  text-align: left;
+}
+
+/* Headings & paragraphs inside those blocks */
+.history-content h2,
+.purpose-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.history-content p,
+.purpose-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive tweak for narrow screens */
+@media (max-width: 768px) {
+  .history-section,
+  .purpose-section {
+    justify-content: center;    /* center on mobile */
+    padding: 4rem 1rem;
+  }
+  .history-content,
+  .purpose-content {
+    max-width: 90%;
+  }
+  .purpose-content {
+    text-align: left;          
+  }
+}
+
+/* CONTACT HEADER – full-bleed, fixed, 100vh */
+.contact-page .location-selection-container {
+  background: url('../assets/eimage.jpeg') center/cover no-repeat fixed;
+  height: 100vh;                   /* force full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+  padding: 0;                      /* remove extra padding */
+}
+
+.form-section {
+  background: var(--color-grey);   /* ← grey page behind the form */
+  min-height: 100vh;               /* ← fill the viewport height */
+  display: flex;
+  align-items: center;             /* vertical center */
+  justify-content: center;         /* horizontal center */
+  padding: 0 2rem;                 /* left/right breathing room */
+}
+
+/* CENTERED FORM – 50% width up to 800px */
+.contact-form-container {
+  width: 50%;
+  max-width: 800px;
+  margin: 0;
+  padding: 4rem 2rem;  
+  background: var(--color-navy);
+  color: var(--color-white); 
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.contact-form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-white);
+}
+.contact-form-container form div {
+  margin-bottom: 1rem;
+}
+.contact-form-container label {
+  display: block;
+  margin-bottom: .5rem;
+  font-weight: bold;
+  color: var(--color-white);
+}
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 4px;
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+.contact-form-container button {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: var(--color-gold);
+  color: var(--color-navy);
+  border: none;
+  padding: .75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background .2s, color .2s;
+}
+.contact-form-container button:hover {
+  background: var(--color-white);
+  color: var(--color-navy);
+}
+
+/* CONTACT DETAILS SECTION */
+.contact-and-map-container {
+  display: flex;
+  width: 100%;
+  min-height: 80vh;
+  background: var(--color-white);
+  padding: 0rem 2rem;
+  align-items: stretch;
+  justify-content: space-between;    /* push items to the sides */
+}
+
+
+.contact-details {
+  flex: 0 0 40%;                      /* fixed 40% width */
+  max-width: 400px;                   /* never wider than 400px */
+  margin: 0; 
+  padding-left: 4rem;                       
+  color: var(--color-navy);
+  align-self: center; 
+}
+
+.map {
+  flex: 0 0 55%;  
+  align-self: center;                     
+  height: 60vh;                       
+  background: rgba(0,128,255,0.1);   
+}
+
+/* FOOTER */
+#siteFooter {
+  background: var(--color-grey);
+  color: var(--color-navy);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--color-navy);
+}
+#siteFooter p {
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .dynamic-bg-container h2 {
+    font-size: 2rem;
+  }
+  .solutions-container {
+    grid-template-columns: 1fr;
+  }
+  .contact-and-map-container {
+    flex-direction: column;
+  }
+}
+
+/* SMALL SCREEN ADJUSTMENT */
+@media (max-width: 900px) {
+  .contact-form-container {
+    width: 90%;
+    max-width: none;
+    margin: 2rem auto;
+  }
+}

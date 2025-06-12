@@ -1,0 +1,9 @@
+Google Cloud Firestore + Express
+1. npm install express @google-cloud/firestore dotenv body-parser
+2. Create a Service Account in GCP Console with Firestore User roles.
+2.a Download the JSON key and set
+2.b export GOOGLE_APPLICATION_CREDENTIALS="/path/to/keyfile.json"
+3. Enable the Firestore API for your project.
+4. .env
+PORT=3001
+PROJECT_ID=your-gcp-project-id
