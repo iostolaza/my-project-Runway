@@ -2,9 +2,7 @@
 
 // your public API root
 // making a change to the location of url. 
-// const API_ROOT = process.env.REACT_APP_API_ROOT;
-const API_ROOT = 'http://localhost:4000';
-
+const API_ROOT = process.env.API_ROOT;
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.form-section form');
