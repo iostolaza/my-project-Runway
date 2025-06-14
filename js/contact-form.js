@@ -1,7 +1,7 @@
 // js/contact-form.js
 
 // your public API root
-const API_ROOT = 'https://projectrunway-api.herokuapp.com';
+const API_ROOT = 'https://projectrunway-api-175ac734850a.herokuapp.com'
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.form-section form');
@@ -25,14 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const json = await res.json();
 
       if (json.success) {
-        alert('✅ Message sent!');
+        alert('Message sent!');
         form.reset();
       } else {
         throw new Error(json.error || 'Server error');
       }
     } catch (err) {
       console.error('Form submission error:', err);
-      alert('❌ Failed to send message.');
+      alert('Failed to send message. ❌');
     }
   });
 });
