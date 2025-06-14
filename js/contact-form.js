@@ -1,7 +1,8 @@
 // js/contact-form.js
 
 // your public API root
-const API_ROOT = 'https://projectrunway-api-175ac734850a.herokuapp.com'
+// making a change to the location of url. 
+const API_ROOT = process.env.REACT_APP_API_ROOT;
 
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('.form-section form');
