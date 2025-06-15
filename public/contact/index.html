@@ -11,13 +11,13 @@
   <nav>
     <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
     <div class="logo-container">
-      <a href="/index.html" title="ProjectRunway"><h1>myprojectRunway</h1></a>
+      <a href="/" title="ProjectRunway"><h1>myprojectRunway</h1></a>
     </div>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
     </div>
   </nav>
 
@@ -35,16 +35,16 @@
         <div class="form-group">
           <div class="form-column">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" required />
+            <input id="name" name="name" type="text" autocomplete="name" required />
           </div>
           <div class="form-column">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
+            <input id="email" name="email" type="email" autocomplete="email" required />
           </div>
         </div>
         <div>
           <label for="message">Message</label><br/>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" autocomplete="off" required></textarea>
         </div>
         <button type="submit">Submit</button>
       </form>
@@ -71,8 +71,9 @@
   </footer>
 
   <script src="js/script.js"></script>
-    <!-- Contact‐form logic -->
-  <script src="js/contact-form.js" defer></script>
+
+  <!-- Contact‐form logic -->
+  <script src="/public/js/contact-form.js" defer></script>
   
 </body>
 </html>
