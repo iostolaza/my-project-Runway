@@ -5,6 +5,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
+const path = require('path');
+
+
 
 // Middleware
 app.use(cors({
@@ -14,6 +17,14 @@ app.use(cors({
 }));
 
 app.use(express.json());
+app.use(cors({
+  origin: [
+    'https://myprojectrunway.com',
+    'https://www.myprojectrunway.com'
+  ],
+  methods: ['GET','POST']
+}));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Routes
 app.use('/api/contact', require('./routes/contact'));
