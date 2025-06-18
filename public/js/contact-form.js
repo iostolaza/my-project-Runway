@@ -1,5 +1,15 @@
 // public/js/contact-form.js
-const API_ROOT = 'https://projectrunway-api-175ac734850a.herokuapp.com';
+
+const hostname = window.location.hostname;
+let API_ROOT;
+
+if (hostname === 'myprojectrunway.com' || hostname === 'www.myprojectrunway.com') {
+  API_ROOT = 'https://projectrunway-api-175ac734850a.herokuapp.com';
+} else {
+  API_ROOT = 'http://localhost:5000';
+}
+
+// const API_ROOT = 'https://projectrunway-api-175ac734850a.herokuapp.com';
 
 console.log('contact-form.js loaded');               // confirm file is served
 

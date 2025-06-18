@@ -1,4 +1,4 @@
-// backend/server.js
+// /server.js
 
 require('dotenv').config();
 const express = require('express');
@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/api/contact', require('./routes/contact'));
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
 
