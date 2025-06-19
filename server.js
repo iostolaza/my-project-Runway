@@ -9,13 +9,13 @@ const mongoose = require('mongoose');
 const app  = express();
 const PORT = process.env.PORT || 5000;
 
-// 1) REQUEST LOGGER
+// REQUEST LOGGER
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} ${req.method} ${req.url}`);
   next();
 });
 
-// 2) CORS + preflight
+// CORS + preflight
 const allowedOrigins = [
   'https://myprojectrunway.com',
   'https://www.myprojectrunway.com',
@@ -32,39 +32,30 @@ app.use(cors({
 }));
 app.options('*', cors());
 
-// 3) JSON BODY PARSER
+// JSON BODY PARSER
 app.use(express.json());
 
-// 4) MAPS KEY ENDPOINT (SAFE TO UNCOMMENT)
-app.get('/api/maps-key', (req, res) => {
-  const origin = req.headers.origin;
-  if (!origin || allowedOrigins.includes(origin)) {
-    return res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
-  }
-  res.status(403).json({ error: 'Forbidden' });
-});
-
-// 5) CONTACT FORM ROUTE
+// CONTACT FORM ROUTE
 app.use('/api/contact', require('./routes/contact'));
 
-// 6) REDIRECT ANY “FRONT-END” ROUTES
+// REDIRECT ANY “FRONT-END” ROUTES
 app.get('/',       (req, res) => res.redirect(302, 'https://myprojectrunway.com'));
 app.get('/contact',(req, res) => res.redirect(302, 'https://myprojectrunway.com/contact/'));
 
-// 7) MONGODB + LISTEN
+// MONGODB + LISTEN
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log('✅ MongoDB connected');
-    app.listen(PORT, () => console.log(`🚀 Server listening on port ${PORT}`));
+    console.log('MongoDB connected');
+    app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
   })
   .catch(err => {
-    console.error('❌ MongoDB connection error:', err);
+    console.error('MongoDB connection error:', err);
     process.exit(1);
   });
 
-// 8) GLOBAL ERROR HANDLER (last)
+// GLOBAL ERROR HANDLER (last)
 app.use((err, req, res, next) => {
-  console.error('🔥 Uncaught error:', err);
+  console.error('Uncaught error:', err);
   res.status(500).json({ success: false, error: err.message || 'Internal Server Error' });
 });
