@@ -2,15 +2,6 @@
 
 // js/script.js
 
-// Determine API root
-const hostname = window.location.hostname;
-const API_ROOT = (
-  hostname === "myprojectrunway.com" ||
-  hostname === "www.myprojectrunway.com"
-)
-  ? "https://projectrunway-api-175ac734850a.herokuapp.com"
-  : "http://localhost:5000";
-
 // NAVIGATION
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
