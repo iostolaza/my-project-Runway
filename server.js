@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const app  = express();
 const PORT = process.env.PORT || 5000;
 
-// 1) REQUEST LOGGER (first)
+// 1) REQUEST LOGGER
 app.use((req, res, next) => {
   console.log(`${new Date().toISOString()} ${req.method} ${req.url}`);
   next();
@@ -35,14 +35,14 @@ app.options('*', cors());
 // 3) JSON BODY PARSER
 app.use(express.json());
 
-// 4) MAPS KEY ENDPOINT
-// app.get('/api/maps-key', (req, res) => {
-//   const origin = req.headers.origin;
-//   if (!origin || allowedOrigins.includes(origin)) {
-//     return res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
-//   }
-//   res.status(403).json({ error: 'Forbidden' });
-// });
+// 4) MAPS KEY ENDPOINT (SAFE TO UNCOMMENT)
+app.get('/api/maps-key', (req, res) => {
+  const origin = req.headers.origin;
+  if (!origin || allowedOrigins.includes(origin)) {
+    return res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
+  }
+  res.status(403).json({ error: 'Forbidden' });
+});
 
 // 5) CONTACT FORM ROUTE
 app.use('/api/contact', require('./routes/contact'));
