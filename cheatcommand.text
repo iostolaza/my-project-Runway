@@ -1,0 +1,45 @@
+
+
+git add server.js package.json package-lock.json
+or 
+git add .
+git commit -m "test"
+git push origin main
+git push heroku main
+
+
+heroku logs --tail --app projectrunway-api
+
+
+Here is my updated server.js.
+Why are we reorganizing everything? Does the order matter??
+
+the app.use() was going to have a try and catch to enure errors catching.
+
+// API: Contact Form /added try-catch for error handling
+try {
+  app.use('/api/contact', require('./routes/contact'));
+} catch (err) {
+  console.error('Failed to load /api/contact:', err);
+}
+
+We are not using this!
+app.use(express.static(path.join(__dirname,'public')));
+
+Why isnt this on your code? 
+// request logger
+console.log('Starting server.js');
+app.use((req, res, next) => {
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+  next();
+});
+
+We need to ensure consitency and not keep changing stuff everyquery. 
+Things can always change. I need you to review the history chats, to ensure consistency.
+One task is to review all this chat, and all of website design for projectrunway.
+
+You will also review documentition and stackoverflow to find relevant problems. 
+
+below is my server.js code. Review. Make any changes that are consitent. 
+
+Lets proceed with stage, commit, push, and heroku logs checks. 

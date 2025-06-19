@@ -12,12 +12,14 @@ const { body, validationResult } = require('express-validator');
 
 // Configure nodemailer once at the top
 const transporter = nodemailer.createTransport({
-  service: 'gmail', // or your actual provider
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
+   host: 'smtp.zoho.com',
+    port: 465,
+   secure: true,                // TLS
+    auth: {
+      user: (process.env.SMTP_USER || '').trim(),
+      pass: (process.env.SMTP_PASS || '').trim(),
+    },
+  });
 
 async function sendConfirmationEmail(name, email) {
   return transporter.sendMail({
@@ -58,11 +60,20 @@ router.post(
       // 1. Save to MongoDB
       await new Contact({ name, email, message }).save();
 
-      // 2. Send confirmation email (await so errors are caught)
-      await sendConfirmationEmail(name, email);
+           // 2) Try to send confirmation, but don’t let it block the response
+    try {
+        if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+          await sendConfirmationEmail(name, email);
+        } else {
+         console.warn('SMTP not configured; skipping confirmation email.');
+       }
+     } catch (emailErr) {
+         console.error('⚠️ Confirmation email error:', emailErr);
+       }
+      // 3) Always tell the client “201”
+     return res.status(201).json({ success: true, message: 'Message received!' });
 
-      // 3. Respond success
-      res.status(201).json({ success: true, message: 'Message received!' });
+
     } catch (err) {
       // 4. Error handling (important for debugging and user feedback)
       console.error('Error in contact route:', err);

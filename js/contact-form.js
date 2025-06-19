@@ -75,6 +75,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 });
-
-
-// new chang its 
