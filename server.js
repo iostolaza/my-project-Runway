@@ -36,13 +36,13 @@ app.options('*', cors());
 app.use(express.json());
 
 // 4) MAPS KEY ENDPOINT
-app.get('/api/maps-key', (req, res) => {
-  const origin = req.headers.origin;
-  if (!origin || allowedOrigins.includes(origin)) {
-    return res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
-  }
-  res.status(403).json({ error: 'Forbidden' });
-});
+// app.get('/api/maps-key', (req, res) => {
+//   const origin = req.headers.origin;
+//   if (!origin || allowedOrigins.includes(origin)) {
+//     return res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
+//   }
+//   res.status(403).json({ error: 'Forbidden' });
+// });
 
 // 5) CONTACT FORM ROUTE
 app.use('/api/contact', require('./routes/contact'));
