@@ -16,17 +16,7 @@ window.addEventListener('scroll', function() {
 
 // Google Maps API and Contact Form
 document.addEventListener('DOMContentLoaded', function () {
-  // Contact form logic
-  if (document.body.classList.contains('contact-page')) {
-    const form = document.querySelector('.contact-form-container form');
-    if (form) {
-      form.addEventListener('submit', async function (e) {
-        e.preventDefault();
-        // ... your fetch logic here
-      });
-    }
-  }
-
+  
   // Google Maps logic
   if (document.getElementById('map')) {
     fetch('https://projectrunway-api-175ac734850a.herokuapp.com/api/maps-key')
@@ -51,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function () {
       })
       .catch(err => {
         console.error('Failed to load Google Maps API key:', err);
-        // Optionally show an error message or fallback
       });
   }
 });

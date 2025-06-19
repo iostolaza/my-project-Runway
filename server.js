@@ -13,10 +13,12 @@ const PORT = process.env.PORT || 5000;
 // CORS middleware
 app.use(cors({
   origin: ['https://myprojectrunway.com', 'https://www.myprojectrunway.com'],
-  methods: ['GET', 'POST','OPTIONS'],
+  methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: false,
 }));
+
+app.options('*', cors()); // allow preflight everywhere
 
 // JSON parsing middleware
 app.use(express.json());
@@ -24,16 +26,29 @@ app.use(express.json());
 // Serve static assets
 app.use(express.static(path.join(__dirname, 'public')));
 
+// API: Serve Google Maps Key
+app.get('/api/maps-key', (req, res) => {
+  const allowed = [
+    'https://myprojectrunway.com',
+    'https://www.myprojectrunway.com',
+    'http://localhost:5000', // for local dev
+    'http://localhost:3000'
+  ];
+  if (!allowed.includes(req.headers.origin)) {
+    return res.status(403).json({ error: 'Forbidden' });
+  }
+  res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
+});
+
+// API: Contact Form
+app.use('/api/contact', require('./routes/contact'));
+
 // Redirect front-end routes to GitHub Pages
 app.get('/', (req, res) => res.redirect(302, 'https://myprojectrunway.com'));
 app.get('/contact', (req, res) => res.redirect(302, 'https://myprojectrunway.com/contact/'));
 
-// API routes
-app.use('/api/contact', require('./routes/contact'));
-
-// Connect to MongoDB and start the server
-mongoose
-  .connect(process.env.MONGO_URI)
+// MongoDB
+mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     console.log('MongoDB connected');
     app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
@@ -41,15 +56,4 @@ mongoose
   .catch((err) => {
     console.error('MongoDB connection error:', err);
     process.exit(1);
-  });
-  
-  app.get('/api/maps-key', (req, res) => {
-    const allowed = [
-      'https://myprojectrunway.com',
-      'https://www.myprojectrunway.com'
-    ];
-    if (!allowed.includes(req.headers.origin)) {
-      return res.status(403).json({ error: 'Forbidden' });
-    }
-    res.json({ key: process.env.GOOGLE_MAPS_API_KEY });
   });
