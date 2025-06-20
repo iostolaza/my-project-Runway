@@ -86,7 +86,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const app  = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
 // REQUEST LOGGER
 app.use((req, res, next) => {
