@@ -1,58 +1,103 @@
 
-
 <mjml>
   <mj-head>
-    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+
     <mj-attributes>
-      <mj-all font-family="Open Sans, Arial, sans-serif" />
+      <mj-all font-family="Garamond, 'PT Serif', Inconsolata, serif" color="#111111" />
+      <!-- Headline text: bold, large, centered -->
       <mj-class name="headline-text"
-        font-family="Big Caslon, Garamond, Times, serif"
-        color="#1a56db"
-        font-size="30px"
-        line-height="40px"
+        font-family="Garamond, 'PT Serif', Inconsolata, serif"
+        font-size="40px"
+        line-height="48px"
+        color="#111111"
         align="center"
-        text-transform="uppercase" />
+        font-weight="700"
+        text-transform="uppercase"
+      />
+ 
       <mj-class name="body-text"
-        font-family="Open Sans, Arial, sans-serif"
+        font-family="Garamond, 'PT Serif', Inconsolata, serif"
+        font-size="18px"
+        line-height="32px"
         color="#111111"
-        font-size="16px"
-        line-height="26px"
-        align="center" />
+        align="center"
+        font-weight="700"
+      />
+ 
       <mj-class name="signoff"
-        font-family="Open Sans, Arial, sans-serif"
-        color="#111111"
+        font-family="Garamond, 'PT Serif', Inconsolata, serif"
         font-size="16px"
         line-height="26px"
-        align="left" />
+        color="#111111"
+        align="left"
+        font-weight="400"
+      />
     </mj-attributes>
     <mj-style>
-      .greeting { font-size: 18px; color: #232323; text-align: center; font-weight: 600; padding: 24px 0 0 0; }
-      .headline-padding { padding: 150px 0 0 0; }
-      .after-headline-padding { padding: 0 0 150px 0; }
-      .after-body-padding { padding: 0 0 150px 0; }
-      .disclaimer { font-size: 10px; color: #111; text-align: center; line-height: 15px; margin: 0 auto; padding: 250px 0 8px 0;}
-      .footer-info { font-size: 10px; color: #111; text-align: center; line-height: 15px; margin: 0 auto; }
+      .greeting {
+        font-size: 18px;
+        color: #111111;
+        text-align: center;
+        font-weight: 400;
+        padding: 50px 0 50px 0;
+      }
+      .headline-padding {
+        padding: 150px 0 150px 0;
+      }
+      .after-headline-padding {
+        padding: 150px 0 150px 0;
+      }
+      .after-body-padding {
+        padding: 200px 0 200px 0;
+      }
+      .footer-info {
+        font-size: 10px;
+        color: #111111;
+        text-align: center;
+        line-height: 15px;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+      .disclaimer {
+        font-size: 10px;
+        color: #111111;
+        text-align: center;
+        line-height: 15px;
+        margin: 0 auto;
+        padding: 250px 0 8px 0;
+        max-width: 600px;
+      }
     </mj-style>
+   
     <mj-style>
-      @media all and (max-width: 600px) {
-        .mj-column-per-100 { width:100%!important; }
-        .mj-column-per-90 { width:90%!important; }
+      @media all and (min-width: 601px) {
+        .mj-column-per-100, .mj-column-per-90 {
+          max-width:600px !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
       }
     </mj-style>
   </mj-head>
   <mj-body background-color="#f9f9f9">
-    <mj-section background-color="#f9f9f9" padding="0" width="100%">
-      <mj-column width="500px" padding="0" vertical-align="top">
-        <mj-text css-class="greeting" padding="24px 0 0 0">
+
+
+    <mj-section background-color="#f9f9f9" padding="0" width="600px" align="center">
+      <mj-column width="600px" padding="0" vertical-align="top">
+        <!-- Greeting -->
+        <mj-text css-class="greeting">
           Hi {{name}},
         </mj-text>
+        <!-- Headline -->
         <mj-text mj-class="headline-text" css-class="headline-padding">
           We are excited<br />to<br />connect with you.
         </mj-text>
+        <!-- Body Text -->
         <mj-text mj-class="body-text" css-class="after-headline-padding">
           Thank you for contacting us.<br/>
           Our team will review your message and get back to you as soon as possible.
         </mj-text>
+        <!-- Signoff -->
         <mj-text mj-class="signoff" css-class="after-body-padding">
           Best wishes,<br/>
           The myprojectRunway Team
@@ -61,14 +106,14 @@
         <mj-divider border-color="#ececec" border-width="1px" padding="40px 0 20px 0"/>
         <!-- Disclaimer -->
         <mj-raw>
-          <p style="margin:0 auto; padding-bottom:10px; font-size:10px; line-height:15px; color:#111111; font-family: 'Open Sans', 'Raleway', Arial, Helvetica, sans-serif; text-align:center; max-width:500px;">
+          <p class="disclaimer" style="margin:0 auto; font-size:10px; line-height:15px; color:#111111; font-family: Garamond, 'PT Serif', Inconsolata, serif; text-align:center; max-width:600px;">
             We only send emails to individuals who have registered at our site:
-            <a href="https://myprojectrunway.com" name="footer_ugghomepage" style="color:#111111; text-decoration:underline;">myprojectRunway.com</a>
+            <a href="https://myprojectrunway.com" style="color:#111111; text-decoration:underline;">myprojectRunway.com</a>
           </p>
         </mj-raw>
         <!-- Footer Info -->
         <mj-raw>
-          <p style="margin:0 auto; padding-bottom:10px; font-size:10px; line-height:15px; color:#111111; font-family: 'Open Sans', 'Raleway', Arial, Helvetica, sans-serif; text-align:center; max-width:500px;">
+          <p class="footer-info" style="margin:0 auto; font-size:10px; line-height:15px; color:#111111; font-family: Garamond, 'PT Serif', Inconsolata, serif; text-align:center; max-width:600px;">
             <span style="color:#111111 !important; text-decoration:none;">
               <strong>myprojectRunway</strong><br />
               427 Teheran-ro, Gangnam District<br />
