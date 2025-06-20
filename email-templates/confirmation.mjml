@@ -62,7 +62,7 @@
     <mj-section background-color="#f9f9f9" padding="50px 10px 25px 10px" width="600px" align="center">
       <mj-column width="600px">
         <mj-text mj-class="headline-text" padding="0">
-          We are excited<br />to<br />connect with you.
+          We are excited<br />to<br />connect with you!
         </mj-text>
       </mj-column>
     </mj-section>
