@@ -81,7 +81,7 @@ router.post(
   '/',
   [
     body('name').trim().notEmpty().escape(),
-    body('email').isEmail().normalizeEmail(),
+    body('email').isEmail(),
     body('message').trim().notEmpty().escape(),
   ],
   async (req, res) => {
