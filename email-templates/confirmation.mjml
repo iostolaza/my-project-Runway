@@ -50,7 +50,7 @@
   </mj-head>
   <mj-body background-color="#f9f9f9">
     <!-- GREETING SECTION -->
-    <mj-section background-color="#f9f9f9" padding="50px 5 50px 5px" align="left">
+    <mj-section background-color="#f9f9f9" padding="50px 5px 50px 25px" width="600px" align="left">
       <mj-column width="600px">
         <mj-text font-size="18px" color="#111111" align="left" font-weight="400" padding="0">
           Hi {{name}},
@@ -59,7 +59,7 @@
     </mj-section>
 
     <!-- HEADLINE SECTION -->
-    <mj-section background-color="#f9f9f9" padding="50px 10 25px 10" align="center">
+    <mj-section background-color="#f9f9f9" padding="50px 10px 25px 10px" width="600px" align="center">
       <mj-column width="600px">
         <mj-text mj-class="headline-text" padding="0">
           We are excited<br />to<br />connect with you.
@@ -68,7 +68,7 @@
     </mj-section>
 
     <!-- BODY SECTION -->
-    <mj-section background-color="#f9f9f9" padding="25px 12 25px 12" align="center">
+    <mj-section background-color="#f9f9f9" padding="25px 12px 25px 12px" width="600px" align="center">
       <mj-column width="600px">
         <mj-text mj-class="body-text" padding="0">
           Thank you for contacting us.<br/>
@@ -78,7 +78,7 @@
     </mj-section>
 
     <!-- SIGNOFF SECTION -->
-    <mj-section background-color="#f9f9f9" padding="100px 5 50px 5" align="center">
+    <mj-section background-color="#f9f9f9" padding="100px 5px 50px 25px" width="600px" align="center">
       <mj-column width="600px">
         <mj-text mj-class="signoff" padding="0">
           Best wishes,<br/>
@@ -88,7 +88,7 @@
     </mj-section>
 
       <!-- DISCLAIMER SECTION -->
-    <mj-section background-color="#f9f9f9" padding="50px 10 10px 10px" align="center">
+    <mj-section background-color="#f9f9f9" padding="50px 10px 10px 10px" width="600px" align="center">
       <mj-column width="600px">
         <mj-raw>
           <p class="disclaimer">
@@ -100,7 +100,7 @@
     </mj-section>
 
     <!-- DIVIDER SECTION -->
-    <mj-section background-color="#f9f9f9" padding="10px 5 10px 5px" align="center">
+    <mj-section background-color="#f9f9f9" padding="10px 5px 10px 5px" width="600px" align="center">
       <mj-column width="600px">
         <mj-divider border-color="#ececec" border-width="1px" padding="0"/>
       </mj-column>
@@ -109,7 +109,7 @@
   
 
     <!-- FOOTER SECTION -->
-    <mj-section background-color="#f9f9f9" padding="10px 10 30px 10" align="center">
+    <mj-section background-color="#f9f9f9" padding="10px 10px 30px 10px" width="600px" align="center">
       <mj-column width="600px">
         <mj-raw>
           <p class="footer-info">
