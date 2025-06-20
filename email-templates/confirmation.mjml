@@ -1,30 +1,68 @@
 
 
 <mjml>
-  <mj-body background-color="#ffffff">
-    <mj-section background-color="#f9f9f9">
+  <mj-head>
+    <mj-font name="Open Sans" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <mj-attributes>
+      <mj-all font-family="Open Sans, Arial, sans-serif" />
+    </mj-attributes>
+    <mj-style>
+      .main-msg { font-size: 16px; color: #555; text-align: center; padding: 10px 0 24px 0; }
+      .big-bold { font-size: 22px; font-weight: bold; text-align: center; padding: 18px 0 18px 0; color: #1a1a1a;}
+      .footer-info { font-size: 12px; color: #999; text-align: center; line-height: 18px;}
+      .disclaimer { font-size: 10px; color: #bbb; text-align: center; padding: 22px 0 2px 0;}
+      .greeting { font-size: 18px; color: #232323; text-align: center; font-weight: 600; padding: 22px 0 0 0; }
+      .signoff { font-size: 15px; color: #232323; text-align: left; padding: 16px 0 0 0;}
+    </mj-style>
+  </mj-head>
+  <mj-body background-color="#f9f9f9">
+    <mj-section padding="24px 0 0 0" background-color="#f9f9f9">
       <mj-column>
-        <mj-text font-size="22px" color="#222" font-weight="bold">
-          Thank you for contacting us at myprojectRunway
+        <mj-text css-class="greeting">
+          Hi {{name}},
         </mj-text>
-        <mj-divider border-color="#eee" />
-        <mj-text font-size="16px" color="#555">
-          Hi {{name}},<br/><br/>
-          Thank you for contacting us at myprojectRunway.<br/>
-          We are excited to connect with you.<br/>
-          Our team will review your message and get back to you as soon as possible.<br/><br/>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f9f9f9" padding="0 0 0 0">
+      <mj-column>
+        <mj-text css-class="big-bold">
+          We are excited to connect with you.
+        </mj-text>
+        <mj-text css-class="main-msg">
+          Thank you for contacting us.<br/>
+          Our team will review your message and get back to you as soon as possible.
+        </mj-text>
+        <mj-text css-class="signoff">
           Best wishes,<br/>
           The myprojectRunway Team
         </mj-text>
-        <mj-divider border-color="#eee" />
-        <mj-text font-size="14px" color="#888">
+      </mj-column>
+    </mj-section>
+
+    <mj-section padding="0">
+      <mj-column>
+        <mj-divider border-color="#ececec" border-width="1px" padding="32px 0 24px 0"/>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#f9f9f9" padding="0 0 0 0">
+      <mj-column>
+        <mj-text css-class="footer-info">
           <strong>myprojectRunway</strong><br/>
           427 Teheran-ro, Gangnam District<br/>
-          Seoul, South Korea<br/><br/>
-          Email: <a href="mailto:info@myprojectRunway.com" style="color:#888;text-decoration:none;">info@myprojectRunway.com</a><br/>
-          Phone: <a href="tel:+821022755951" style="color:#888;text-decoration:none;">+82 10 2275 5951</a><br/>
-          <a href="https://myprojectrunway.com/privacy" style="color:#888;text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp;
-          <a href="https://myprojectrunway.com/unsubscribe" style="color:#888;text-decoration:underline;">Unsubscribe</a>
+          Seoul, South Korea<br/>
+          Email: <a href="mailto:info@myprojectRunway.com" style="color:#999;text-decoration:none;">info@myprojectRunway.com</a><br/>
+          Phone: <a href="tel:+821022755951" style="color:#999;text-decoration:none;">+82 10 2275 5951</a><br/>
+          <a href="https://myprojectrunway.com/privacy" style="color:#999;text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp;
+          <a href="https://myprojectrunway.com/unsubscribe" style="color:#999;text-decoration:underline;">Unsubscribe</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding="0">
+      <mj-column>
+        <mj-text css-class="disclaimer">
+          We only send emails to individuals who have registered at myprojectRunway.com.
         </mj-text>
       </mj-column>
     </mj-section>
