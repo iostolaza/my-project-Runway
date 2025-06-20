@@ -1,10 +1,7 @@
-
 <mjml>
   <mj-head>
-
     <mj-attributes>
       <mj-all font-family="Garamond, 'PT Serif', Inconsolata, serif" color="#111111" />
-      <!-- Headline text: bold, large, centered -->
       <mj-class name="headline-text"
         font-family="Garamond, 'PT Serif', Inconsolata, serif"
         font-size="40px"
@@ -14,16 +11,14 @@
         font-weight="700"
         text-transform="uppercase"
       />
- 
       <mj-class name="body-text"
         font-family="Garamond, 'PT Serif', Inconsolata, serif"
-        font-size="18px"
-        line-height="32px"
+        font-size="16px"
+        line-height="26px"
         color="#111111"
         align="center"
-        font-weight="700"
+        font-weight="400"
       />
- 
       <mj-class name="signoff"
         font-family="Garamond, 'PT Serif', Inconsolata, serif"
         font-size="16px"
@@ -34,41 +29,15 @@
       />
     </mj-attributes>
     <mj-style>
-      .greeting {
-        font-size: 18px;
-        color: #111111;
-        text-align: center;
-        font-weight: 400;
-        padding: 50px 0 50px 0;
-      }
-      .headline-padding {
-        padding: 150px 0 150px 0;
-      }
-      .after-headline-padding {
-        padding: 150px 0 150px 0;
-      }
-      .after-body-padding {
-        padding: 200px 0 200px 0;
-      }
-      .footer-info {
+      .footer-info, .disclaimer {
         font-size: 10px;
         color: #111111;
         text-align: center;
         line-height: 15px;
         margin: 0 auto;
-        max-width: 600px;
-      }
-      .disclaimer {
-        font-size: 10px;
-        color: #111111;
-        text-align: center;
-        line-height: 15px;
-        margin: 0 auto;
-        padding: 250px 0 8px 0;
         max-width: 600px;
       }
     </mj-style>
-   
     <mj-style>
       @media all and (min-width: 601px) {
         .mj-column-per-100, .mj-column-per-90 {
@@ -80,42 +49,72 @@
     </mj-style>
   </mj-head>
   <mj-body background-color="#f9f9f9">
-
-
-    <mj-section background-color="#f9f9f9" padding="0" width="600px" align="center">
-      <mj-column width="600px" padding="0" vertical-align="top">
-        <!-- Greeting -->
-        <mj-text css-class="greeting">
+    <!-- GREETING SECTION -->
+    <mj-section background-color="#f9f9f9" padding="50px 0 100px 0" width="600px" align="left">
+      <mj-column width="600px">
+        <mj-text font-size="18px" color="#111111" align="left" font-weight="400" padding="0">
           Hi {{name}},
         </mj-text>
-        <!-- Headline -->
-        <mj-text mj-class="headline-text" css-class="headline-padding">
+      </mj-column>
+    </mj-section>
+
+    <!-- HEADLINE SECTION -->
+    <mj-section background-color="#f9f9f9" padding="25px 0 25px 0" width="600px" align="center">
+      <mj-column width="600px">
+        <mj-text mj-class="headline-text" padding="0">
           We are excited<br />to<br />connect with you.
         </mj-text>
-        <!-- Body Text -->
-        <mj-text mj-class="body-text" css-class="after-headline-padding">
+      </mj-column>
+    </mj-section>
+
+    <!-- BODY SECTION -->
+    <mj-section background-color="#f9f9f9" padding="25px 0 25px 0" width="600px" align="center">
+      <mj-column width="600px">
+        <mj-text mj-class="body-text" padding="0">
           Thank you for contacting us.<br/>
           Our team will review your message and get back to you as soon as possible.
         </mj-text>
-        <!-- Signoff -->
-        <mj-text mj-class="signoff" css-class="after-body-padding">
+      </mj-column>
+    </mj-section>
+
+    <!-- SIGNOFF SECTION -->
+    <mj-section background-color="#f9f9f9" padding="100px 0 50px 0" width="600px" align="center">
+      <mj-column width="600px">
+        <mj-text mj-class="signoff" padding="0">
           Best wishes,<br/>
           The myprojectRunway Team
         </mj-text>
-        <!-- Divider for separation -->
-        <mj-divider border-color="#ececec" border-width="1px" padding="40px 0 20px 0"/>
-        <!-- Disclaimer -->
+      </mj-column>
+    </mj-section>
+
+      <!-- DISCLAIMER SECTION -->
+    <mj-section background-color="#f9f9f9" padding="50px 0 10px 0" width="600px" align="center">
+      <mj-column width="600px">
         <mj-raw>
-          <p class="disclaimer" style="margin:0 auto; font-size:10px; line-height:15px; color:#111111; font-family: Garamond, 'PT Serif', Inconsolata, serif; text-align:center; max-width:600px;">
+          <p class="disclaimer">
             We only send emails to individuals who have registered at our site:
             <a href="https://myprojectrunway.com" style="color:#111111; text-decoration:underline;">myprojectRunway.com</a>
           </p>
         </mj-raw>
-        <!-- Footer Info -->
+      </mj-column>
+    </mj-section>
+
+    <!-- DIVIDER SECTION -->
+    <mj-section background-color="#f9f9f9" padding="10px 0 10px 0" width="600px" align="center">
+      <mj-column width="600px">
+        <mj-divider border-color="#ececec" border-width="1px" padding="0"/>
+      </mj-column>
+    </mj-section>
+
+  
+
+    <!-- FOOTER SECTION -->
+    <mj-section background-color="#f9f9f9" padding="10px 0 30px 0" width="600px" align="center">
+      <mj-column width="600px">
         <mj-raw>
-          <p class="footer-info" style="margin:0 auto; font-size:10px; line-height:15px; color:#111111; font-family: Garamond, 'PT Serif', Inconsolata, serif; text-align:center; max-width:600px;">
+          <p class="footer-info">
             <span style="color:#111111 !important; text-decoration:none;">
-              <strong>myprojectRunway</strong><br />
+              <strong><span style="font-size:20px; font-weight:700;">myprojectRunway</span></strong><br />
               427 Teheran-ro, Gangnam District<br />
               Seoul, South Korea<br />
               Email: <a href="mailto:info@myprojectRunway.com" style="color:#111111;text-decoration:none;">info@myprojectRunway.com</a><br/>
