@@ -73,7 +73,7 @@ async function sendConfirmationEmail(name, email) {
   return transporter.sendMail({
     from:    `"myprojectRunway" <${process.env.SMTP_USER}>`,
     to:       email,
-    subject:  "We received your message at myprojectRunway!",
+    subject:  "We received your message!",
     html: emailHtml,
   });
 }
