@@ -7,7 +7,7 @@ const API_ROOT = (
   hostname === 'myprojectrunway.com' ||
   hostname === 'www.myprojectrunway.com'
 )
-  ? 'https://projectrunway-api-175ac734850a.herokuapp.com'
+  ? 'https://projectrunway-api-b99afb2eca22.herokuapp.com'
   : 'http://localhost:5000';
 
 const MAX_RETRIES = 1;  
