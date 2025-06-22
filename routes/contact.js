@@ -50,6 +50,7 @@ const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
 
 const renderMjmlTemplate = require('../utils/renderMjmlTemplate');
+const UnsubscribedEmail = require('./models/UnsubscribedEmail');
 const path = require('path');
 
 // Setup Zoho SMTP transporter
@@ -70,12 +71,17 @@ async function sendConfirmationEmail(name, email) {
     path.join(__dirname, '../email-templates/confirmation.mjml'),
     { name }
   );
-  return transporter.sendMail({
-    from:    `"myprojectRunway" <${process.env.SMTP_USER}>`,
-    to:       email,
-    subject:  "We received your message!",
-    html: emailHtml,
-  });
+  if (isUnsubscribed) {
+    // Do not send
+    return;
+  } else {
+    return transporter.sendMail({
+      from:    `"myprojectRunway" <${process.env.SMTP_USER}>`,
+      to:       email,
+      subject:  "We received your message!",
+      html: emailHtml,
+    });
+  }
 }
 
 // Contact form route
