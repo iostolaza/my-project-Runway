@@ -5,8 +5,6 @@ require('dotenv').config();
 const express  = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
-app.use(express.static('email'));
-
 
 const app  = express();
 const PORT = process.env.PORT || 5001;
@@ -54,6 +52,8 @@ app.options('*', cors(), (req, res) => {
 
 // JSON BODY PARSER
 app.use(express.json());
+app.use(express.static('email'));
+// Made a change
 
 // CONTACT FORM ROUTE
 app.use('/api/contact', require('./routes/contact'));
