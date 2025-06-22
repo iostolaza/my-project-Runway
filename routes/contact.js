@@ -66,22 +66,22 @@ const transporter = nodemailer.createTransport({
 
 // Email function
 async function sendConfirmationEmail(name, email) {
-  //added as part of the email template
+  const isUnsubscribed = await UnsubscribedEmail.findOne({ email });
+  if (isUnsubscribed) {
+    console.log(`[EMAIL] Not sending to unsubscribed: ${email}`);
+    return;
+  }
+   // Generate and send email
   const emailHtml = await renderMjmlTemplate(
-    path.join(__dirname, '../email-templates/confirmation.mjml'),
+    path.join(__dirname, '../email/confirmation.mjml'),
     { name }
   );
-  if (isUnsubscribed) {
-    // Do not send
-    return;
-  } else {
     return transporter.sendMail({
       from:    `"myprojectRunway" <${process.env.SMTP_USER}>`,
       to:       email,
       subject:  "We received your message!",
       html: emailHtml,
     });
-  }
 }
 
 // Contact form route
