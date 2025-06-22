@@ -45,7 +45,7 @@ router.get('/', async (req, res) => {
   }
 } else {
   // Show the form if no email in query
-  res.sendFile(require('path').resolve(__dirname, '../public/unsubscribe.html'));
+  res.sendFile(require('path').resolve(__dirname, '../email/unsubscribe.html'));
   }
 });
 

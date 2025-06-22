@@ -50,7 +50,7 @@ const { body, validationResult } = require('express-validator');
 const nodemailer = require('nodemailer');
 
 const renderMjmlTemplate = require('../utils/renderMjmlTemplate');
-const UnsubscribedEmail = require('./models/UnsubscribedEmail');
+const UnsubscribedEmail = require('../models/UnsubscribedEmail');
 const path = require('path');
 
 // Setup Zoho SMTP transporter
