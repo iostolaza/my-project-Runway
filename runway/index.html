@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Runway – myprojectRunway</title>
+  <link rel="stylesheet" href="/stylecss/style.css" />
+</head>
+<body>
+  <!-- NAV -->
+  <nav>
+    <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+    <div class="logo-container">
+      <a href="/"><h1>myprojectRunway</h1></a>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/runway/">Runway</a>
+      <a href="/terms/">Terms</a> 
+    </div>
+  </nav>
+
+  <main>
+    <section class="runway-section" id="highlights">
+      <h1>Highlights: Spring 2026 Menswear</h1>
+      <div class="card-row">
+        <div class="runway-card">
+          <img src="/assets/runway/look1.jpg" alt="Look 1" />
+          <div class="card-content">
+            <h3>Global Spa Guide</h3>
+            <p>Vogue's Global Spa Guide</p>
+          </div>
+        </div>
+        <!-- Repeat for as many as you want -->
+      </div>
+    </section>
+    <section class="runway-section" id="top-stories">
+      <h2>Top Stories</h2>
+      <div class="card-row">
+        <!-- Static or dynamic cards here -->
+      </div>
+    </section>
+    <section class="runway-section" id="featured">
+      <h2>Featured (from Firestore)</h2>
+      <div id="featured-gallery" class="card-row"></div>
+    </section>
+  </main>
+
+  <footer class="footer-content">
+    <p><span>© 2025 myprojectRunway – All Rights Reserved.</span></p>
+  </footer>
+  <script src="/js/script.js"></script>
+  <script src="/js/runway.js"></script>
+</body>
+</html>

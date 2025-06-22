@@ -119,7 +119,7 @@
               Seoul, South Korea<br />
               Email: <a href="mailto:info@myprojectRunway.com" style="color:#111111;text-decoration:none;">info@myprojectRunway.com</a><br/>
               Phone: <a href="tel:+821022755951" style="color:#111111;text-decoration:none;">+82 10 2275 5951</a><br/>
-              <a href="https://myprojectrunway.com/email/privacy.html" style="color:#111111; text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp;
+              <a href="https://myprojectrunway.com/terms/" style="color:#111111; text-decoration:underline;">Privacy Policy</a> &nbsp;|&nbsp;
               <a href="https://myprojectrunway.com/email/unsubscribe.html" style="color:#111111; text-decoration:underline;">Unsubscribe</a>
             </span>
           </p>
@@ -128,3 +128,5 @@
     </mj-section>
   </mj-body>
 </mjml>
+
+ 

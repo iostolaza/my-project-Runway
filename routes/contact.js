@@ -1,43 +1,6 @@
 
 // routes/contact.js
 
-// const express = require('express');
-// const router  = express.Router();
-// const Contact = require('../models/Contact');
-// const { body, validationResult } = require('express-validator');
-
-// // POST /api/contact
-// router.post(
-//   '/',
-//   [
-//     body('name').trim().notEmpty().escape(),
-//     body('email').isEmail().normalizeEmail(),
-//     body('message').trim().notEmpty().escape(),
-//   ],
-//   async (req, res) => {
-//     const errors = validationResult(req);
-//     if (!errors.isEmpty()) {
-//       return res.status(400).json({ success: false, errors: errors.array() });
-//     }
-
-//     const { name, email, message } = req.body;
-
-//     try {
-//       await new Contact({ name, email, message }).save();
-//       return res.status(201).json({ success: true, message: 'Message received!' });
-//     } catch (err) {
-//       console.error('Error in contact route:', err);
-//       return res.status(500).json({
-//         success: false,
-//         message: 'Server error saving message',
-//         error: err.message,
-//       });
-//     }
-//   }
-// );
-
-// routes/contact.js
-
 const express = require('express');
 const router  = express.Router();
 const Contact = require('../models/Contact');
