@@ -237,7 +237,10 @@
     color: var(--color-white);
     padding: 2rem;
     border-radius: 6px;
-    max-width: 600px;
+    max-width: 660px;
+    width: 90vw;
+    margin: 0 auto;
+    
   }
   .about-content h2 {
     font-size: 2.5rem;
@@ -291,7 +294,8 @@
     color: var(--color-navy);
     padding: 2rem;
     border-radius: 6px;
-    max-width: 600px;            
+    max-width: 660px;
+    width: 90vw;            
   }
   
   .purpose-content {
@@ -349,8 +353,8 @@
       padding: 3rem 2.5rem 2.5rem 2.5rem;
       border-radius: 14px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.09);
-      max-width: 540px;
-      width: 100%;
+      max-width: 660px; 
+      width: 90vw;
       margin: auto;
     }
     .terms-section h1 {
@@ -398,7 +402,7 @@
     
     .contact-form-container {
       width: 50%;
-      max-width: 800px;
+      max-width: 660px; 
       margin: 0;
       padding: 4rem 2rem;  
       background: var(--color-navy);
@@ -493,8 +497,8 @@
     padding: 3rem 2.5rem 2.5rem 2.5rem;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.09);
-    max-width: 580px;
-    width: 100%;
+    max-width: 660px; 
+    width: 90vw;
     margin: auto;
   }
   
@@ -541,7 +545,7 @@
 
   /* ===== UNSUBSCRIBE PAGE ===== */
 
-  body {
+  .unsubscribe-page {
     font-family: Garamond, 'PT Serif', Inconsolata, serif;
     background: #f9f9f9;
     color: #111;
@@ -551,23 +555,23 @@
     border-radius: 14px;
     box-shadow: 0 6px 30px rgba(0,0,0,0.07);
   }
-  h1 {
+  .unsubscribe-page h1 {
     font-size: 2em;
     font-weight: 700;
     text-align: center;
     margin-bottom: 24px;
   }
-  form {
+  .unsubscribe-page #form-container form {
     display: flex;
     flex-direction: column;
     gap: 18px;
     margin-top: 18px;
   }
-  label {
+  .unsubscribe-page label {
     font-size: 1em;
     margin-bottom: 6px;
   }
-  input[type="email"] {
+  .unsubscribe-page input[type="email"] {
     padding: 12px 12px;
     font-size: 1em;
     border: 1px solid #d2d2d2;
@@ -576,7 +580,7 @@
     box-sizing: border-box;
     font-family: inherit;
   }
-  button {
+  .unsubscribe-page button {
     background: #111;
     color: #fff;
     font-size: 1.1em;
@@ -589,10 +593,10 @@
     transition: background 0.15s;
     margin-top: 6px;
   }
-  button:hover {
+  .unsubscribe-page button:hover {
     background: #1a56db;
   }
-  .confirmation {
+  .unsubscribe-page .confirmation {
     background: #e6f5ea;
     color: #217a46;
     padding: 18px 14px;
@@ -602,11 +606,12 @@
     font-weight: 600;
     font-size: 1.1em;
   }
-  .footer {
+  .unsubscribe-page .footer {
     text-align: center;
     margin-top: 44px;
     font-size: 0.96em;
     color: #999;
   }
+  
   
   /* ===== RESPONSIVE (Media) ===== */
