@@ -612,10 +612,10 @@
   /* ===== RESPONSIVE (Media) ===== */
 
 /* ===== MOBILE (up to 600px) ===== */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) { */
 
   /* GLOBAL NAV & FOOTER */
-  nav {
+  /* nav {
     flex-direction: column;
     align-items: flex-start;
     padding: 0.6rem 0.6rem 0.2rem 0.6rem;
@@ -633,10 +633,10 @@
   #siteFooter {
     padding: 1.1rem 0.8rem;
     font-size: 0.97rem;
-  }
+  } */
 
   /* PAGE CONTAINERS (center, stack vertically) */
-  .terms-main,
+  /* .terms-main,
   .contact-and-map-container,
   .about-section,
   .purpose-section,
@@ -645,17 +645,17 @@
     align-items: stretch;
     padding: 3.5rem 0.3rem 1rem 0.3rem;
     min-height: unset;
-  }
+  } */
 
   /* GENERIC CARD/FLEX ELEMENTS */
-  .card-row {
+  /* .card-row {
     flex-direction: column;
     align-items: center;
     gap: 22px;
-  }
+  } */
 
   /* CARD STYLES */
-  .runway-card {
+  /* .runway-card {
     width: 92vw;
     min-width: 92vw;
     max-width: 99vw;
@@ -664,10 +664,10 @@
   .card-content {
     padding: 1.2rem;
     text-align: center;
-  }
+  } */
 
   /* TERMS, ABOUT, HISTORY, PURPOSE, CONTACT FORM */
-  .terms-section,
+  /* .terms-section,
   .contact-form-container,
   .about-content,
   .history-content,
@@ -682,7 +682,7 @@
   .history-content h2,
   .purpose-content h2,
   .contact-form-container h2 {
-    font-size: 1.35rem; /* slightly larger for legibility */
+    font-size: 1.35rem;
   }
   .terms-section h2 {
     font-size: 1.08rem;
@@ -698,10 +698,10 @@
   .contact-form-container textarea {
     font-size: 1rem;
     line-height: 1.65;
-  }
+  } */
 
   /* CONTACT PAGE */
-  .contact-and-map-container {
+  /* .contact-and-map-container {
     gap: 0.8rem;
     padding: 3.5rem 0.3rem 1rem 0.3rem;
   }
@@ -723,18 +723,18 @@
     padding: 1.2rem 0.7rem;
     margin: 0.5rem 0;
   }
-}
+} */
 
 /* ===== TABLET (601px to 900px) ===== */
-@media (min-width: 601px) and (max-width: 900px) {
+/* @media (min-width: 601px) and (max-width: 900px) { */
 
   /* NAV/FOOTER */
-  nav, #siteFooter {
+  /* nav, #siteFooter {
     padding: 1rem 1rem;
-  }
+  } */
 
   /* PAGE CONTENT CONTAINERS */
-  .terms-section,
+  /* .terms-section,
   .contact-form-container,
   .about-content,
   .history-content,
@@ -755,10 +755,10 @@
     max-width: 98vw;
     height: 300px;
   }
-}
+} */
 
 /* ===== DESKTOP (901px and up) ===== */
-@media (min-width: 901px) {
+/* @media (min-width: 901px) {
   .terms-section,
   .contact-form-container,
   .about-content,
@@ -769,5 +769,5 @@
     border-radius: 16px;
     font-size: 1.13em;
   }
-}
+} */
 
