@@ -51,10 +51,14 @@ app.options('*', cors(), (req, res) => {
 });
 
 // JSON BODY PARSER
-app.use(express.json());
+app.use('/terms', express.static('terms'));
+app.use('/runway', express.static('runway'));
+app.use('/about', express.static('about'));
+app.use('/contact', express.static('contact'));
 app.use('/email', express.static('email'));
-app.use('/js', express.static('js')); 
-// Made a change
+app.use('/stylecss', express.static('stylecss'));
+app.use('/js', express.static('js'));
+app.use('/assets', express.static('assets'));
 
 // CONTACT FORM ROUTE
 app.use('/api/contact', require('./routes/contact'));
