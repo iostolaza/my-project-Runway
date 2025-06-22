@@ -36,12 +36,7 @@
 //   }
 // );
 
-// module.exports = router;
-
-// Note: Everything above here workes.
-// I will block out all the code above this line for testing. 
-
-// The code belore is for mailer
+// routes/contact.js
 
 const express = require('express');
 const router  = express.Router();
