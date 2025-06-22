@@ -52,7 +52,7 @@ app.options('*', cors(), (req, res) => {
 
 // JSON BODY PARSER
 app.use(express.json());
-app.use(express.static('email'));
+app.use('/email', express.static('email'));
 // Made a change
 
 // CONTACT FORM ROUTE
