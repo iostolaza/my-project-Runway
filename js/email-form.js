@@ -1,6 +1,8 @@
 
 // js/email-form.js
 
+const apiUrl = 'https://projectrunway-api-b99afb2eca22.herokuapp.com/unsubscribe';
+
 document.addEventListener('DOMContentLoaded', function () {
   const params = new URLSearchParams(window.location.search);
   if(params.get('email')) {
@@ -10,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('unsubscribe-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const email = document.getElementById('email').value;
-    const res = await fetch('/unsubscribe', {
+    const res = await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email })
