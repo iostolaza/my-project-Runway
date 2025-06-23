@@ -8,20 +8,26 @@
 </head>
 <body>
   <!-- NAV -->
-  <nav>
-    <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+  <nav class="site-nav">
+    <button class="hamburger-icon" onclick="toggleNav()">&#9776;</button>
     <div class="logo-container">
       <a href="/"><h1>myprojectRunway</h1></a>
     </div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="desktop-links">
       <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
       <a href="/runway/">Runway</a>
-      <a href="/terms/">Terms</a> 
+      <a href="/terms/">Terms</a>
     </div>
-  </nav>
+    <div class="dropdown-nav" id="dropdownNav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/runway/">Runway</a>
+      <a href="/terms/">Terms</a>
+    </div>
+  </nav>  
 
   <main>
     <section class="runway-section" id="highlights">
@@ -49,7 +55,8 @@
     </section>
   </main>
 
-  <footer class="footer-content">
+  <!-- FOOTER -->
+  <footer id="siteFooter" class="footer-content">
     <p><span>© 2025 myprojectRunway – All Rights Reserved.</span></p>
   </footer>
   <script src="/js/script.js"></script>

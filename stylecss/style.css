@@ -35,63 +35,45 @@
   
   /* ===== GLOBAL NAVIGATION ===== */
 
-    nav {
+    .site-nav {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
+      width: 100vw;
       background: var(--color-navy);
       color: var(--color-white);
-      z-index: 100;
+      display: flex;
+      align-items: center;
+      z-index: 200;
+      padding: 1rem 2rem;
+      justify-content: space-between;
       transition: background 0.3s, color 0.3s;
     }
-    nav.scrolled {
+    
+    .site-nav .desktop-links { display: flex; gap: 1.4rem; }
+    .site-nav .hamburger-icon, .site-nav .dropdown-nav { display: none; }
+    
+    /* Scroll effect for nav */
+    .site-nav.scrolled {
       background: var(--color-white);
       color: var(--color-navy);
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .logo-container h1 {
-      font-size: 1.75rem;
-      color: var(--color-gold);
+    .site-nav.scrolled .logo-container h1 { color: var(--color-navy); }
+    .site-nav.scrolled .desktop-links a { color: var(--color-navy); }
+    .site-nav.scrolled .hamburger-icon { color: var(--color-navy); }
+
+    .dropdown-nav {
+      transition: max-height 0.25s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+      overflow: hidden;
+      max-height: 0;
+      opacity: 0;
     }
-    .hamburger-icon {
-      font-size: 1.75rem;
-      cursor: pointer;
-      color: var(--color-white);
+    .dropdown-nav.open {
+      max-height: 400px;
+      opacity: 1;
     }
     
-    .sidenav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 100%;
-      background: var(--color-navy);
-      overflow-x: hidden;
-      transition: width 0.3s;
-      padding-top: 4rem;
-    }
-    .sidenav a {
-      display: block;
-      padding: 1rem 2rem;
-      font-size: 1.25rem;
-      color: var(--color-grey);
-      transition: color 0.2s;
-    }
-    .sidenav a:hover {
-      color: var(--color-white);
-    }
-    .sidenav .closebtn {
-      position: absolute;
-      top: 0.5rem;
-      right: 1rem;
-      font-size: 2rem;
-      color: var(--color-white);
-    }
 
   /* ===== GLOBAL FOOTER ===== */
 
@@ -543,75 +525,334 @@
     color: var(--color-navy);
   }
 
+  .contact-info-block {
+    text-align: center;
+    margin: 2.2em auto 0 auto;
+    padding: 1.1em 0 0.5em 0;
+    font-size: 1.15em;
+    color: var(--color-navy);
+    line-height: 1.7;
+  }
+  
+  .contact-info-block .contact-company {
+    font-size: 1.27em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--color-navy);
+
+  }
+  .contact-info-block a {
+    color: var(--color-gold);
+    text-decoration: underline;
+    font-size: 1.05em;
+  }
+  
+
   /* ===== UNSUBSCRIBE PAGE ===== */
 
-  .unsubscribe-page {
-    font-family: Garamond, 'PT Serif', Inconsolata, serif;
-    background: #f9f9f9;
-    color: #111;
-    max-width: 480px;
-    margin: 60px auto;
-    padding: 32px 16px 16px 16px;
-    border-radius: 14px;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.07);
-  }
-  .unsubscribe-page h1 {
-    font-size: 2em;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 24px;
-  }
-  .unsubscribe-page #form-container form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    margin-top: 18px;
-  }
-  .unsubscribe-page label {
-    font-size: 1em;
-    margin-bottom: 6px;
-  }
-  .unsubscribe-page input[type="email"] {
-    padding: 12px 12px;
-    font-size: 1em;
-    border: 1px solid #d2d2d2;
-    border-radius: 7px;
-    width: 100%;
-    box-sizing: border-box;
-    font-family: inherit;
-  }
-  .unsubscribe-page button {
-    background: #111;
-    color: #fff;
-    font-size: 1.1em;
-    font-family: inherit;
-    font-weight: 700;
-    padding: 12px;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    transition: background 0.15s;
-    margin-top: 6px;
-  }
-  .unsubscribe-page button:hover {
-    background: #1a56db;
-  }
-  .unsubscribe-page .confirmation {
-    background: #e6f5ea;
-    color: #217a46;
-    padding: 18px 14px;
-    border-radius: 7px;
-    margin-top: 22px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 1.1em;
-  }
-  .unsubscribe-page .footer {
-    text-align: center;
-    margin-top: 44px;
-    font-size: 0.96em;
-    color: #999;
-  }
-  
-  
+.unsubscribe-section {
+  background: var(--color-white);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+  max-width: 660px; 
+  width: 90vw;
+  margin: auto;
+}
+.unsubscribe-section h1,
+.terms-section h1 {
+  font-size: 2.1rem;
+  color: var(--color-navy);
+  margin-bottom: 1.4rem;
+  text-align: center;
+  border-bottom: 3px solid var(--color-gold);
+  padding-bottom: .8rem;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+}
+.unsubscribe-section label,
+.terms-section label {
+  font-size: 1.07rem;
+  color: var(--color-navy);
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.unsubscribe-section input[type="email"],
+.terms-section input[type="email"] {
+  padding: 12px 12px;
+  font-size: 1.07rem;
+  border: 1px solid var(--color-grey);
+  border-radius: 7px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin-bottom: 1.1em;
+}
+.unsubscribe-section button,
+.terms-section button {
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-size: 1.12rem;
+  font-family: inherit;
+  font-weight: 700;
+  padding: 12px 0;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  margin-top: 6px;
+}
+.unsubscribe-section button:hover,
+.terms-section button:hover {
+  background: var(--color-gold);
+  color: var(--color-navy);
+}
+.unsubscribe-section .footer,
+.terms-section .footer {
+  text-align: center;
+  margin-top: 44px;
+  font-size: 1em;
+  color: #999;
+}
+
   /* ===== RESPONSIVE (Media) ===== */
+
+  @media (max-width: 600px) {
+
+    /* Main container blocks */
+    .terms-section,
+    .about-content,
+    .history-content,
+    .purpose-content,
+    .contact-form-container {
+      width: 98vw;
+      max-width: 99vw;
+      margin: 0 auto;
+      padding: 1.2rem 0.6rem;
+      font-size: 1.07rem;  /* slightly larger body text */
+    }
+  
+    /* Headings */
+    .terms-section h1,
+    .about-content h2,
+    .history-content h2,
+    .purpose-content h2,
+    .runway-section h1,
+    .runway-section h2 {
+      font-size: 1.35rem;
+      padding-bottom: 0.4rem;
+    }
+    .terms-section h2 {
+      font-size: 1.14rem;
+      margin-top: 1.1em;
+    }
+  
+    /* Paragraphs, labels, links */
+    .terms-section p,
+    .about-content p,
+    .history-content p,
+    .purpose-content p,
+    .terms-section li,
+    .contact-form-container label,
+    .contact-form-container input,
+    .contact-form-container textarea {
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+    .solutions-container {
+      padding: 1.7rem 0.3rem 1.4rem 0.3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      background: var(--color-grey);
+    }
+    .solutions-container > div {
+      padding: 1.2rem 0.7rem;
+      max-width: 99vw;
+      border-radius: 9px;
+      margin: 0 auto;
+      font-size: 1.07rem;
+    }
+    .solutions-container h2 {
+      font-size: 1.18rem;
+    }
+
+    .about-section {
+      padding: 1.2rem 0.7rem;
+      min-height: unset;
+      background-size: cover;
+    }
+    .about-content {
+      padding: 1.15rem 0.7rem;
+      max-width: 99vw;
+      font-size: 1.07rem;
+      border-radius: 9px;
+      margin: 0 auto;
+    }
+    .about-content h2 {
+      font-size: 1.2rem;
+    }
+    .about-content p {
+      font-size: 1.05rem;
+    }
+
+    .runway-section {
+      padding: 1.2rem 0.7rem;
+    }
+    .runway-section h1, .runway-section h2 {
+      font-size: 1.25rem;
+      text-align: center;
+      margin-bottom: 0.9rem;
+    }
+    .card-row {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 1rem;
+      padding: 0.8rem 0;
+    }
+    .runway-card {
+      width: 95vw;
+      min-width: 95vw;
+      max-width: 99vw;
+      margin: 0 auto;
+    }
+    .card-content {
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+
+    .terms-section {
+      box-shadow: none !important;
+      font-size: 1.12rem;
+      padding: 1.3rem 0.7rem 1.7rem 0.7rem;
+    }
+    .terms-section h1 {
+      font-size: 1.27rem;
+    }
+    .terms-section h2 {
+      font-size: 1.11rem;
+      margin-top: 1.2em;
+    }
+    .terms-section p,
+    .terms-section li {
+      font-size: 1.04rem;
+    }
+  
+    /* NAV and logo */
+  /* === MOBILE NAV === */
+  .site-nav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.7rem 0.6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2010;
+  }
+  .site-nav .desktop-links { display: none; }
+  .site-nav .hamburger-icon { 
+    display: block; 
+    background: none; 
+    border: none; 
+    font-size: 2.2rem; 
+    margin: 0 auto; 
+    color: var(--color-gold);
+    cursor: pointer;
+  }
+  .site-nav .dropdown-nav {
+    display: none;
+    flex-direction: column;
+    width: 100vw;
+    background: var(--color-navy);
+    position: absolute;
+    left: 0; top: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    z-index: 2020;
+  }
+  .site-nav .dropdown-nav.open { display: flex; }
+  .site-nav .logo-container h1 { font-size: 1.4rem; text-align: center; }
+
+    .logo-container h1 {
+      font-size: 1.12rem;
+    }
+    .hamburger-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.15rem;
+    }
+    #siteFooter, .footer-content, .terms-section .footer, .unsubscribe-section .footer {
+      padding: 1rem 0.7rem;
+      font-size: 0.97rem;
+    }
+  
+    /* Card rows (Runway & features) */
+    .card-row {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    .runway-card {
+      width: 95vw;
+      min-width: 95vw;
+      max-width: 99vw;
+      margin: 0 auto;
+    }
+    .card-content {
+      padding: 1.1rem;
+      text-align: center;
+    }
+  
+    /* Contact page: Stack form, map, address */
+    .contact-and-map-container {
+      flex-direction: column !important;
+      align-items: stretch !important;
+      gap: 0.8rem;
+      padding: 1.2rem 0.5rem;
+      min-height: unset;
+    }
+    .contact-details {
+      order: 1;
+      text-align: center;
+      padding-left: 0;
+      margin-bottom: 1.2rem;
+    }
+    .map {
+      order: 2;
+      width: 96vw;
+      height: 210px;
+      margin: 0 auto 1rem auto;
+      border-radius: 12px;
+    }
+    .contact-form-container {
+      width: 100%;
+      padding: 1.1rem 0.7rem;
+      margin: 0.5rem 0;
+    }
+    .contact-form-container h2 {
+      font-size: 1.18rem;
+      margin-bottom: 1.2rem;
+    }
+    .contact-form-container input,
+    .contact-form-container textarea {
+      font-size: 1.03rem;
+      padding: 0.65rem;
+    }
+    .contact-form-container button {
+      font-size: 1.07rem;
+      padding: 0.8rem 0;
+    }
+
+    #siteFooter, .footer-content {
+      padding: 1.1rem 0.7rem;
+      font-size: 1.01rem;
+      text-align: center;
+      background: var(--color-grey);
+      color: var(--color-navy);
+      border-top: 1px solid var(--color-navy);
+      width: 100vw;
+      margin: 0 auto;
+    }
+  }
+  

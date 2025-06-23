@@ -8,21 +8,26 @@
 </head>
 <body>
   <!-- NAV -->
-  <nav>
-    <span class="hamburger-icon" onclick="openNav()">&#9776;</span>
+  <nav class="site-nav">
+    <button class="hamburger-icon" onclick="toggleNav()">&#9776;</button>
     <div class="logo-container">
       <a href="/"><h1>myprojectRunway</h1></a>
     </div>
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div class="desktop-links">
       <a href="/">Home</a>
       <a href="/about/">About</a>
       <a href="/contact/">Contact</a>
       <a href="/runway/">Runway</a>
-      <a href="/terms/">Terms</a> 
-     
+      <a href="/terms/">Terms</a>
     </div>
-  </nav>
+    <div class="dropdown-nav" id="dropdownNav">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/runway/">Runway</a>
+      <a href="/terms/">Terms</a>
+    </div>
+  </nav>  
   
   <main class="terms-main">
     <section class="terms-section">
@@ -79,13 +84,13 @@
       <p>
         These Terms are governed by the laws of the State of California, United States. Any disputes will be resolved in the courts of California unless otherwise required by your local law.
       </p>
-  
-      <h2>10. Contact</h2>
-      <p>
-        <strong>myprojectRunway</strong><br>
+
+      <div class="contact-info-block">
+        <span class="contact-company">myprojectRunway</span><br>
         427 Teheran-ro, Gangnam District, Seoul, South Korea<br>
         <a href="mailto:info@myprojectRunway.com">info@myprojectRunway.com</a>
-      </p>
+      </div>
+
     </section>
   </main>  
 
