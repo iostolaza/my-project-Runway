@@ -8,6 +8,13 @@
 </head>
 <body class="about-page">
   <!-- NAV -->
+  <nav class="site-nav">
+    <button class="hamburger-icon" onclick="openSideNav()" aria-label="Open menu">&#9776;</button>
+    <div class="logo-container" id="logoContainer" tabindex="0">
+      <h1>myprojectRunway</h1>
+    </div>
+  </nav>
+  <!-- SIDENAV (desktop) -->
   <div id="sideNav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
     <a href="/">Home</a>
@@ -16,7 +23,7 @@
     <a href="/runway/">Runway</a>
     <a href="/terms/">Terms</a>
   </div>
-  <!-- Mobile Dropdown -->
+  <!-- MOBILE DROPDOWN NAV -->
   <div class="mobile-dropdown-nav" id="mobileDropdown">
     <a href="/">Home</a>
     <a href="/about/">About</a>
@@ -24,7 +31,7 @@
     <a href="/runway/">Runway</a>
     <a href="/terms/">Terms</a>
   </div>
-  
+
   <main>
     <!-- WHAT WE DO -->
     <section class="about-section">

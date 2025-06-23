@@ -49,6 +49,7 @@ app.options('*', cors(), (req, res) => {
   console.log('[CORS] Preflight OPTIONS handled for:', req.headers.origin);
   res.sendStatus(204);
 });
+app.use(express.json());
 
 // JSON BODY PARSER
 app.use('/terms', express.static('terms'));
