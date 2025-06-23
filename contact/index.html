@@ -9,10 +9,7 @@
 <body class="contact-page">
   <!-- NAV -->
   <nav class="site-nav">
-    <button class="hamburger-icon" onclick="toggleNav()">&#9776;</button>
-    <div class="logo-container">
-      <a href="/"><h1>myprojectRunway</h1></a>
-    </div>
+    <button class="hamburger-icon" onclick="openSideNav()" aria-label="Open menu">&#9776;</button>
     <div class="desktop-links">
       <a href="/">Home</a>
       <a href="/about/">About</a>
@@ -20,14 +17,27 @@
       <a href="/runway/">Runway</a>
       <a href="/terms/">Terms</a>
     </div>
-    <div class="dropdown-nav" id="dropdownNav">
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/contact/">Contact</a>
-      <a href="/runway/">Runway</a>
-      <a href="/terms/">Terms</a>
+    <div class="logo-container" id="logoContainer" tabindex="0">
+      <h1>myprojectRunway</h1>
     </div>
   </nav>
+  <!-- Side Navigation for Desktop -->
+  <div id="sideNav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/runway/">Runway</a>
+    <a href="/terms/">Terms</a>
+  </div>
+  <!-- Mobile Dropdown -->
+  <div class="mobile-dropdown-nav" id="mobileDropdown">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/contact/">Contact</a>
+    <a href="/runway/">Runway</a>
+    <a href="/terms/">Terms</a>
+  </div>
   
   <main>
     <!-- HEADER -->
