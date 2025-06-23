@@ -1,28 +1,55 @@
 // Desktop sidenav (only on desktop)
 function openSideNav() {
-  document.getElementById("sideNav").style.width = "250px";
+  if (window.innerWidth > 600) { // only on desktop
+    document.getElementById("sideNav").style.width = "250px";
+    // Also close mobile dropdown if open
+    document.getElementById("mobileDropdown").classList.remove("open");
+  }
 }
 function closeSideNav() {
   document.getElementById("sideNav").style.width = "0";
 }
 
-// Mobile dropdown (no hamburger, tap company name)
+// Mobile dropdown (tap logo, only on mobile)
 function toggleMobileNav() {
-  const dropdown = document.getElementById("mobileDropdown");
-  dropdown.classList.toggle("open");
+  // Only activate on mobile
+  if (window.innerWidth <= 600) {
+    const dropdown = document.getElementById("mobileDropdown");
+    dropdown.classList.toggle("open");
+    // Also close sidenav if open
+    document.getElementById("sideNav").style.width = "0";
+  }
 }
 
-// Mobile only: Open dropdown when logo-container is clicked
-document.addEventListener('DOMContentLoaded', function() {
-  // Mobile: open dropdown on logo tap
+// Event listeners setup
+function setupNavHandlers() {
   const logo = document.getElementById('logoContainer');
-  if (window.matchMedia('(max-width: 600px)').matches) {
+  // Remove any old handlers (avoid stacking)
+  logo.onclick = null;
+  logo.onkeypress = null;
+  if (window.innerWidth <= 600) {
     logo.onclick = toggleMobileNav;
     logo.onkeypress = function(e) {
       if (e.key === 'Enter' || e.key === ' ') toggleMobileNav();
     };
   }
-  // Close dropdown when a link is clicked (mobile)
+
+  // Hamburger: Show only on desktop, hide on mobile
+  const hamburger = document.querySelector('.hamburger-icon');
+  if (window.innerWidth <= 600) {
+    hamburger.style.display = 'none';
+  } else {
+    hamburger.style.display = 'block';
+  }
+}
+
+// Re-run handler setup on resize for responsiveness
+window.addEventListener('resize', setupNavHandlers);
+
+document.addEventListener('DOMContentLoaded', function() {
+  setupNavHandlers();
+
+  // Close mobile dropdown when a link is clicked (mobile only)
   document.querySelectorAll('.mobile-dropdown-nav a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById("mobileDropdown").classList.remove("open");
