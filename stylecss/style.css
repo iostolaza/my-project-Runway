@@ -473,44 +473,128 @@
     
     .contact-and-map-container {
       display: flex;
-      flex-direction: row;
-      width: 100%;
-      min-height: 60vh;
-      background: var(--color-white);
-      padding: 0 2rem;
-      align-items: center;
       justify-content: center;
-      gap: 3rem; 
+      align-items: stretch;
+      width: 100vw;
+      max-width: 1200px;
+      min-height: 600px;
+      margin: 0 auto 2.5rem auto;
+      background: var(--color-white, #fff);
+      border-radius: 14px;
+      overflow: hidden;
     }
-    
-    .contact-details {
-      flex: 0 0 360px;
-      max-width: 400px;
-      padding: 2rem 2rem 2rem 0;
-      color: var(--color-navy);
-      align-self: center;
+
+    .contact-details,
+    .map {
+      flex: 1 1 50%;
+      max-width: 600px;
+      min-width: 300px;
       display: flex;
       flex-direction: column;
-      align-items: center;      /* horizontal center */
-      justify-content: center;  /* vertical center */
-      text-align: center;       /* text centered */
+      align-items: center;
+      justify-content: center;
       box-sizing: border-box;
-    }
+      text-align: center;
+      background: none;
+      padding: 4rem 2rem;
+}
     
+  .contact-details {
+  border-right: 2px solid #eee; 
+}
     .map {
-      width: 470px;
-      height: 470px;
-      min-width: 280px;
-      max-width: 500px;
-      max-height: 500px;
-      border-radius: 18px;
-      margin: 0;
-      box-shadow: 0 3px 16px rgba(0,0,0,0.10);
-      background: #e7eef5;
       display: flex;
       align-items: center;
       justify-content: center;
+      height: 500px;
+      width: 500px;
+      min-width: 350px;
+      min-height: 450px;
+      margin: auto;
+      background: var(--color-white, #fff);
+      padding: 0;
     }
+
+    #map-canvas {
+      height: 100%;
+      width: 100%;
+      border-radius: 0;
+    }
+
+.contact-details h2,
+.contact-details p,
+.contact-details a {
+  color: var(--color-navy, #131b2e);
+  font-size: 1.15rem;
+}
+
+.contact-details h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-navy, #131b2e);
+  letter-spacing: 0.01em;
+}
+
+.contact-details p,
+.contact-details a {
+  font-size: 1.15rem;
+  color: var(--color-navy, #4a5364);
+  margin: 0;
+}
+
+.contact-details a {
+  color: var(--color-navy, #131b2e);
+  text-decoration: underline;
+}
+
+
+    /* ===== Featured Americas Two-Column Layout ===== */
+.FeaturedAmericas {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100vw;
+  min-height: 600px;
+  margin: 0 auto 2.5rem auto;
+  max-width: 1200px;
+  background: linear-gradient(to right, #fff 49.9%, #eaeaea 50.1%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.06);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.featured-city {
+  flex: 1 1 50%;
+  max-width: 600px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1.5px solid #ddd;
+  background: none;
+}
+
+.city-geneva {
+  border-right: none;
+  background: #eaeaea;
+}
+
+.FeaturedAmericas h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-navy, #131b2e);
+  letter-spacing: 0.01em;
+}
+
+.FeaturedAmericas p {
+  font-size: 1.15rem;
+  color: var(--color-grey, #4a5364);
+  margin: 0;
+}
     
   
   /* ===== TERMS PAGE ===== */
@@ -853,22 +937,27 @@
   
     /* Contact page: Stack form, map, address */
     .contact-and-map-container {
-      flex-direction: column !important;
-      align-items: center !important;
-      gap: 2rem;
-      padding: 1.2rem 0.5rem;
+      flex-direction: column;
+      min-height: 0;
+      /* background: var(--color-white, #fff); */
     }
     .contact-details {
-      padding: 2rem 1rem 1rem 1rem;
-      max-width: 95vw;
-      width: 100%;
+      border-right: none;
+      border-bottom: 2px solid #eee;
+      padding: 2.5rem 1rem;
+      max-width: 100vw;
     }
     .map {
-      width: 95vw;
-      min-width: 220px;
-      max-width: 99vw;
-      height: 320px;
-      max-height: 420px;
+      padding: 2.5rem 1rem;
+      min-width: unset;
+      min-height: 350px;
+      height: 400px;
+      max-width: 100vw;
+    }
+    #map-canvas {
+      min-height: 350px;
+      height: 100%;
+      width: 100%;
     }
     .contact-form-container {
       width: 100%;
@@ -887,6 +976,23 @@
     .contact-form-container button {
       font-size: 1.07rem;
       padding: 0.8rem 0;
+    }
+
+    .FeaturedAmericas {
+      flex-direction: column;
+      background: none;
+      box-shadow: none;
+    }
+    .featured-city {
+      border-right: none;
+      border-bottom: 1.5px solid #ddd;
+      max-width: 100vw;
+      min-width: unset;
+      padding: 2.5rem 1rem;
+    }
+    .city-geneva {
+      border-bottom: none;
+      background: #eaeaea;
     }
 
     #siteFooter, .footer-content {
