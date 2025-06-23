@@ -80,27 +80,36 @@
 
   /* Mobile dropdown (hidden by default) */
 .mobile-dropdown-nav {
+  display: none;
+  flex-direction: column;
   position: absolute;
-  top: 100%;
+  top: 56px;
   left: 0;
   width: 100vw;
-  display: none;
-  background: var(--color-navy);
+  background: #131b2e;
+  z-index: 1000;
   box-shadow: 0 6px 24px rgba(0,0,0,0.11);
+  align-items: center; 
 }
 .mobile-dropdown-nav.open {
   display: flex;
   opacity: 1;
   max-height: 400px;
+  transition: max-height 0.25s ease;
 }
 .mobile-dropdown-nav a {
-  color: var(--color-gold);
-  font-size: 1.15rem;
-  padding: 1.15rem 1.5rem;
-  border-bottom: 1px solid var(--color-grey);
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
   text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 1.1rem;
 }
-.mobile-dropdown-nav a:last-child { border-bottom: none; }
+.mobile-dropdown-nav a:last-child {
+  margin-bottom: 0;
+}
     
 
   /* ===== GLOBAL FOOTER ===== */

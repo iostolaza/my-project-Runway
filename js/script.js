@@ -1,6 +1,6 @@
 // Desktop sidenav (only on desktop)
 function openSideNav() {
-  if (window.innerWidth > 600) { // only on desktop
+  if (window.innerWidth > 600) { 
     document.getElementById("sideNav").style.width = "250px";
     // Also close mobile dropdown if open
     document.getElementById("mobileDropdown").classList.remove("open");
@@ -36,10 +36,12 @@ function setupNavHandlers() {
 
   // Hamburger: Show only on desktop, hide on mobile
   const hamburger = document.querySelector('.hamburger-icon');
+  if (hamburger) {
   if (window.innerWidth <= 600) {
     hamburger.style.display = 'none';
   } else {
     hamburger.style.display = 'block';
+  }
   }
 }
 
