@@ -473,33 +473,43 @@
     
     .contact-and-map-container {
       display: flex;
+      flex-direction: row;
       width: 100%;
-      min-height: 80vh;
+      min-height: 60vh;
       background: var(--color-white);
-      padding: 0rem 2rem;
-      align-items: stretch;
-      justify-content: space-between;  
+      padding: 0 2rem;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem; 
     }
     
     .contact-details {
-      flex: 0 0 40%;                   
-      max-width: 400px;              
-      margin: 0; 
-      padding-left: 4rem;                       
+      flex: 0 0 360px;
+      max-width: 400px;
+      padding: 2rem 2rem 2rem 0;
       color: var(--color-navy);
-      align-self: center; 
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;      /* horizontal center */
+      justify-content: center;  /* vertical center */
+      text-align: center;       /* text centered */
+      box-sizing: border-box;
     }
     
     .map {
-      width: 350px;
+      width: 470px;
+      height: 470px;
       min-width: 280px;
-      max-width: 420px;
-      height: 440px;
+      max-width: 500px;
+      max-height: 500px;
       border-radius: 18px;
-      margin: 40px auto 40px 0;
+      margin: 0;
       box-shadow: 0 3px 16px rgba(0,0,0,0.10);
       background: #e7eef5;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
   
@@ -844,23 +854,21 @@
     /* Contact page: Stack form, map, address */
     .contact-and-map-container {
       flex-direction: column !important;
-      align-items: stretch !important;
-      gap: 0.8rem;
+      align-items: center !important;
+      gap: 2rem;
       padding: 1.2rem 0.5rem;
-      min-height: unset;
     }
     .contact-details {
-      order: 1;
-      text-align: center;
-      padding-left: 0;
-      margin-bottom: 1.2rem;
+      padding: 2rem 1rem 1rem 1rem;
+      max-width: 95vw;
+      width: 100%;
     }
     .map {
-      order: 2;
-      width: 96vw;
-      height: 210px;
-      margin: 0 auto 1rem auto;
-      border-radius: 12px;
+      width: 95vw;
+      min-width: 220px;
+      max-width: 99vw;
+      height: 320px;
+      max-height: 420px;
     }
     .contact-form-container {
       width: 100%;
