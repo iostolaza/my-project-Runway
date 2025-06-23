@@ -74,7 +74,11 @@
     transition: color 0.2s;
   }
   .sidenav .closebtn {
-    position: absolute; top: 1rem; right: 2rem; font-size: 2rem; color: var(--color-gold);
+    position: absolute; 
+    top: 1rem; 
+    right: 2rem; 
+    font-size: 2rem; 
+    color: var(--color-gold);
   }
   .sidenav a:hover, .sidenav .closebtn:hover { color: var(--color-gold); }
 
@@ -110,7 +114,6 @@
 .mobile-dropdown-nav a:last-child {
   margin-bottom: 0;
 }
-    
 
   /* ===== GLOBAL FOOTER ===== */
 
@@ -126,7 +129,13 @@
     }
 
     /* --- FOOTER --- */
-#siteFooter { margin-top: 5rem; padding: 2rem 1rem; background: var(--color-grey); color: var(--color-navy); text-align: center; }
+    #siteFooter { 
+      margin-top: 5rem;
+      padding: 2rem 1rem;
+      background: var(--color-grey); 
+      color: var(--color-navy); 
+      text-align: center; 
+    }
 
   /* ===== HOME HERO ===== */
 
@@ -243,7 +252,6 @@
       background: var(--color-white);
       color: var(--color-navy);
     }
-  
   
   /* ===== ABOUT PAGE ===== */
 
@@ -547,9 +555,7 @@
   text-decoration: underline;
 }
 
-
-    /* ===== Featured Americas Two-Column Layout ===== */
-.FeaturedAmericas {
+/* .FeaturedAmericas {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -594,8 +600,7 @@
   font-size: 1.15rem;
   color: var(--color-grey, #4a5364);
   margin: 0;
-}
-    
+} */
   
   /* ===== TERMS PAGE ===== */
 
@@ -681,7 +686,6 @@
     font-size: 1.05em;
   }
   
-
   /* ===== UNSUBSCRIBE PAGE ===== */
 
 .unsubscribe-section {
@@ -763,7 +767,7 @@
       max-width: 99vw;
       margin: 0 auto;
       padding: 1.2rem 0.6rem;
-      font-size: 1.07rem;  /* slightly larger body text */
+      font-size: 1.07rem; 
     }
   
     /* Headings */
@@ -876,7 +880,6 @@
       font-size: 1.04rem;
     }
   
-    /* NAV and logo */
   /* === MOBILE NAV === */
   .site-nav {
     flex-direction: column;
@@ -917,7 +920,6 @@
       font-size: 0.97rem;
     }
   
-    /* Card rows (Runway & features) */
     .card-row {
       flex-direction: column !important;
       align-items: center !important;
@@ -935,11 +937,10 @@
       text-align: center;
     }
   
-    /* Contact page: Stack form, map, address */
     .contact-and-map-container {
       flex-direction: column;
       min-height: 0;
-      /* background: var(--color-white, #fff); */
+      background: var(--color-white, #fff);
     }
     .contact-details {
       border-right: none;
@@ -977,8 +978,7 @@
       font-size: 1.07rem;
       padding: 0.8rem 0;
     }
-
-    .FeaturedAmericas {
+    /* .FeaturedAmericas {
       flex-direction: column;
       background: none;
       box-shadow: none;
@@ -993,7 +993,7 @@
     .city-geneva {
       border-bottom: none;
       background: #eaeaea;
-    }
+    } */
 
     #siteFooter, .footer-content {
       padding: 1.1rem 0.7rem;
