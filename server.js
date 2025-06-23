@@ -57,16 +57,25 @@ app.use('/runway', express.static('runway'));
 app.use('/about', express.static('about'));
 app.use('/contact', express.static('contact'));
 app.use('/email', express.static('email'));
-app.use('/stylecss', express.static('stylecss'));
-app.use('/js', express.static('js'));
+// app.use('/stylecss', express.static('stylecss'));
+// app.use('/js', express.static('js'));
 app.use('/assets', express.static('assets'));
+
+app.use('/stylecss', express.static(__dirname + '/stylecss'));
+app.use('/js', express.static(__dirname + '/js'));
+app.use('/map', express.static(__dirname + '/map'));
+
 
 // CONTACT FORM ROUTE
 app.use('/api/contact', require('./routes/contact'));
 
 // REDIRECT ANY “FRONT-END” ROUTES
 app.get('/',       (req, res) => res.redirect(302, 'https://myprojectrunway.com'));
-app.get('/contact',(req, res) => res.redirect(302, 'https://myprojectrunway.com/contact/'));
+app.get('/contact', (req, res) => res.redirect(302, 'https://myprojectrunway.com/contact/'));
+app.get('/about', (req, res) => res.redirect(302, 'https://myprojectrunway.com/about/'));
+app.get('/runway', (req, res) => res.redirect(302, 'https://myprojectrunway.com/runway/'));
+app.get('/terms', (req, res) => res.redirect(302, 'https://myprojectrunway.com/terms/'));
+
 
 // MONGODB + LISTEN
 mongoose
