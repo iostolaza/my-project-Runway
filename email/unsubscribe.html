@@ -1,30 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Unsubscribe from Emails – myprojectRunway</title>
-  <meta name="viewport" content="width=600, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Garamond:400,700|PT+Serif:400,700|Inconsolata:400,700" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Unsubscribe – myprojectRunway</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="/stylecss/style.css" />
-
 </head>
 <body class="unsubscribe-page">
-  <main class="terms-main">
-    <section class="terms-section unsubscribe-section">
-      <h1>Unsubscribe</h1>
-      <div id="form-container">
+  <!-- NAV, SIDENAV, etc. remain the same -->
+
+  <main class="unsubscribe-main">
+    <section class="unsubscribe-section">
+      <h1>Unsubscribe from Emails</h1>
+      <div class="unsubscribe-form-container">
         <form id="unsubscribe-form" method="POST" action="/unsubscribe">
-          <label for="email">Enter your email to unsubscribe:</label>
-          <input type="email" id="email" name="email" required placeholder="you@email.com" />
+          <label for="email">Your email address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="you@email.com"
+          />
           <button type="submit">Unsubscribe</button>
         </form>
       </div>
-      <div class="footer">
-        &copy; 2025 myprojectRunway<br>
-        <a href="/terms/" style="color:#999; text-decoration:underline;">Privacy Policy</a>
+      <div class="unsubscribe-footer">
+        &copy; <span id="currentYear"></span> myprojectRunway<br />
+        <a href="/terms/">Privacy Policy</a>
       </div>
     </section>
   </main>
+
   <script src="/js/email-form.js"></script>
+  <script>
+    // dynamic year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

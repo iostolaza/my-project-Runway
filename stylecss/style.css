@@ -408,43 +408,6 @@
     .card-content {
       padding: 18px;
     }
-    .terms-main {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 85vh;
-      background: var(--color-grey);
-      padding: 5rem 1rem 2rem 1rem;
-    }
-    .terms-section {
-      background: var(--color-white);
-      padding: 3rem 2.5rem 2.5rem 2.5rem;
-      border-radius: 14px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
-      max-width: 660px; 
-      width: 90vw;
-      margin: auto;
-    }
-    .terms-section h1 {
-      font-size: 2.2rem;
-      color: var(--color-navy);
-      margin-bottom: 1.4rem;
-      text-align: center;
-      border-bottom: 3px solid var(--color-gold);
-      padding-bottom: .7rem;
-    }
-    .terms-section h2 {
-      margin-top: 1.7em;
-      margin-bottom: 0.7em;
-      font-size: 1.4rem;
-      color: var(--color-navy);
-    }
-    .terms-section p {
-      margin-bottom: 1.2em;
-      font-size: 1.1em;
-      color: var(--color-navy);
-      text-align: left;
-    }
     
   /* ===== CONTACT PAGE ===== */
 
@@ -640,156 +603,161 @@
   margin: 0;
 } */
   
-  /* ===== TERMS PAGE ===== */
-
+  /* ===== TERMS & PRIVACY ===== */
   .terms-main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;        
-    min-height: 85vh;
-    background: var(--color-grey);
-    padding: 6.5rem 1rem 3rem 1rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
   }
-  
   .terms-section {
     background: var(--color-white);
-    padding: 3rem 2.5rem 2.5rem 2.5rem;
-    border-radius: 16px;
+    padding: 3rem 2.5rem 2.5rem;
+    border-radius: 7px;
     box-shadow: 0 8px 24px rgba(0,0,0,0.09);
-    max-width: 660px; 
+    max-width: 660px;
     width: 90vw;
     margin: auto;
   }
-  
-  .terms-section h1 {
-    font-size: 2.1rem;
-    color: var(--color-navy);
-    margin-bottom: 1.4rem;
-    text-align: center;
-    border-bottom: 3px solid var(--color-gold);
-    padding-bottom: .8rem;
-    letter-spacing: 0.01em;
-    font-weight: 600;
-  }
-  
-  .terms-section h2 {
-    margin-top: 2.2em;
-    margin-bottom: 0.7em;
-    font-size: 1.33rem;
-    color: var(--color-navy);
-    font-weight: 500;
-    letter-spacing: 0.01em;
-  }
-  
-  .terms-section p, 
-  .terms-section li {
-    margin-bottom: 1.25em;
-    font-size: 1.08em;
-    color: var(--color-navy);
-    text-align: left;
-    line-height: 1.75;
-    font-family: inherit;
-  }
-  
-  .terms-section a {
-    color: var(--color-gold);
-    text-decoration: underline;
-    word-break: break-all;
-  }
-  
-  .terms-section strong {
-    font-weight: 600;
-    color: var(--color-navy);
-  }
 
-  .contact-info-block {
-    text-align: center;
-    margin: 2.2em auto 0 auto;
-    padding: 1.1em 0 0.5em 0;
-    font-size: 1.15em;
-    color: var(--color-navy);
-    line-height: 1.7;
-  }
-  
-  .contact-info-block .contact-company {
-    font-size: 1.27em;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--color-navy);
-
-  }
-  .contact-info-block a {
-    color: var(--color-gold);
-    text-decoration: underline;
-    font-size: 1.05em;
-  }
-  
-  /* ===== UNSUBSCRIBE PAGE ===== */
-
-.unsubscribe-section {
-  background: var(--color-white);
-  padding: 3rem 2.5rem 2.5rem 2.5rem;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.09);
-  max-width: 660px; 
-  width: 90vw;
-  margin: auto;
-}
-.unsubscribe-section h1,
 .terms-section h1 {
-  font-size: 2.1rem;
+  font-size: 2.2rem;
   color: var(--color-navy);
   margin-bottom: 1.4rem;
   text-align: center;
   border-bottom: 3px solid var(--color-gold);
-  padding-bottom: .8rem;
-  letter-spacing: 0.01em;
-  font-weight: 600;
+  padding-bottom: .7rem;
 }
-.unsubscribe-section label,
-.terms-section label {
-  font-size: 1.07rem;
-  color: var(--color-navy);
-  margin-bottom: 0.6rem;
+.terms-section .last-updated em {
   display: block;
-}
-.unsubscribe-section input[type="email"],
-.terms-section input[type="email"] {
-  padding: 12px 12px;
-  font-size: 1.07rem;
-  border: 1px solid var(--color-grey);
-  border-radius: 7px;
-  width: 100%;
-  box-sizing: border-box;
-  font-family: inherit;
-  margin-bottom: 1.1em;
-}
-.unsubscribe-section button,
-.terms-section button {
-  background: var(--color-navy);
-  color: var(--color-gold);
-  font-size: 1.12rem;
-  font-family: inherit;
-  font-weight: 700;
-  padding: 12px 0;
-  border: none;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: background 0.15s, color 0.15s;
-  margin-top: 6px;
-}
-.unsubscribe-section button:hover,
-.terms-section button:hover {
-  background: var(--color-gold);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-style: italic;
   color: var(--color-navy);
 }
-.unsubscribe-section .footer,
-.terms-section .footer {
-  text-align: center;
-  margin-top: 44px;
-  font-size: 1em;
-  color: #999;
+.terms-section h2 {
+  margin-top: 2em;
+  margin-bottom: .7em;
+  font-size: 1.4rem;
+  color: var(--color-navy);
 }
+.terms-section p {
+  margin-bottom: 1.2em;
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  text-align: left;
+  line-height: 1.75;
+}
+.terms-section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.2em;
+}
+.terms-section ul li {
+  margin-bottom: .6em;
+  font-size: 1.1rem;
+  color: var(--color-navy);
+  line-height: 1.6;
+}
+.terms-section a {
+  color: var(--color-gold);
+  text-decoration: underline;
+}
+.terms-section strong {
+  font-weight: 600;
+  color: var(--color-navy);
+}
+.contact-info-block {
+  text-align: center;
+  margin: 2.2em auto 0;
+  font-size: 1.15em;
+  color: var(--color-navy);
+  line-height: 1.7;
+}
+.contact-info-block .contact-company {
+  /* display: block; */
+  font-size: 1.27em;
+  font-weight: 700;
+}
+.contact-info-block a {
+  color: var(--color-gold);
+  text-decoration: underline;
+} 
+
+  
+  /* ===== UNSUBSCRIBE PAGE ===== */
+
+  .unsubscribe-main {
+    flex: 1;               
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-grey);
+    padding: 2rem 1rem;
+  }
+  
+  .unsubscribe-section {
+    background: var(--color-white);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    max-width: 480px;
+    width: 90vw;
+    text-align: center;
+  }
+  
+  .unsubscribe-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-navy);
+  }
+  
+  .unsubscribe-form-container {
+    margin-bottom: 2rem;
+  }
+  
+  .unsubscribe-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .unsubscribe-form-container label {
+    font-weight: bold;
+    color: var(--color-navy);
+    text-align: left;
+  }
+  
+  .unsubscribe-form-container input {
+    padding: 0.75rem;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .unsubscribe-form-container button {
+    background: var(--color-gold);
+    color: var(--color-navy);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .unsubscribe-form-container button:hover {
+    background: var(--color-white);
+  }
+  
+  .unsubscribe-footer {
+    font-size: 0.85rem;
+    color: var(--color-navy);
+  }
+  
+  .unsubscribe-footer a {
+    color: var(--color-navy);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
 
   /* ===== RESPONSIVE (Media) ===== */
 
@@ -814,10 +782,13 @@
       width: 100%;
       max-height: 0;
       overflow-y: auto;
+      /* background: rgba(0, 31, 63, 0.9);  */
       background: var(--color-navy);
       transition: max-height 0.3s ease;
       text-align: center;
       z-index: 1000;
+      border-radius: 0 0 7px 7px;
+
     }
     /* Expanded state */
     .mobile-dropdown-nav.open {
@@ -828,8 +799,19 @@
       display: block;
       padding: 12px 0;
       color: var(--color-grey);
-      font-size: 1rem;
-      transition: color 0.2s;
+      font-size: 1.7rem;
+      /* transition: color 0.2s ; */
+      position: relative;
+      transition: background 0.2s, color 0.2s;
+
+    }
+    .mobile-dropdown-nav a + a {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .mobile-dropdown-nav a:hover {
+      background: var(--color-gold);
+      color: var(--color-navy);
+      border-radius: 7px;
     }
   
     /* Hide desktop sidenav on mobile */
@@ -1213,7 +1195,97 @@
       width: 100%;
     }
 
+    .terms-main {
+      padding-top: 1rem;
+      padding-bottom: 2rem;
+      min-height: auto;
+    }
+
+    .terms-section {
+      padding: 2rem 1rem;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: none;
+    }
+
+    .terms-section h1 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: .5rem;
+    }
+
+    .terms-section .last-updated em {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    .terms-section h2 {
+      font-size: 1.25rem;
+      margin-top: 1.5em;
+      margin-bottom: .5em;
+    }
+
+    .terms-section p,
+    .terms-section ul li {
+      font-size: 1rem;
+      margin-bottom: 1em;
+      line-height: 1.6;
+    }
+    .terms-section ul {
+      padding-left: 1.5rem;    
+      margin-bottom: 1.2em; 
+      margin-left: 1rem;
+    }
+
+    .contact-info-block {
+      text-align: center;
+      margin: 2.2em auto 0 auto;
+      padding: 2.5em 0 5em 0;
+      font-size: 1.15em;
+      color: var(--color-navy);
+      line-height: 1.7;
+    }
+    .contact-info-block .contact-company {
+      font-size: 1.27em;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--color-navy);    
+    } 
+
+/* ===== UNSUBSCRIBE PAGE ===== */
+    .unsubscribe-main {
+      padding: 1rem;
+    }
+  
+    .unsubscribe-section {
+      padding: 2rem 1rem;
+      width: 95vw;
+      box-shadow: none;
+      border-radius: 6px;
+    }
+  
+    .unsubscribe-section h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  
+    .unsubscribe-form-container input {
+      font-size: 0.95rem;
+    }
+  
+    .unsubscribe-form-container button {
+      font-size: 0.95rem;
+      padding: 0.65rem;
+    }
+  
+    .unsubscribe-footer {
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
   }
+
+  
   
   
   
