@@ -1,45 +1,117 @@
 
 
-git add server.js package.json package-lock.json
-or 
-git add .
-git commit -m "test"
-git push origin main
-git push heroku main
+Staging & Committing
+git add .                                 # Stage all changes
+git add server.js package.json package-lock.json    # Or stage selected files
 
+
+git commit -m "Mobile CSS update, output page html change"
+
+Branching
+
+git checkout -b feature/mailing-feature   # Create & switch to a feature branch
+git push origin feature/mailing-feature   # Push feature branch to GitHub
+git push heroku feature/mailing-feature:main   # Push your branch to Heroku main
+
+# Merge main into your feature branch (always update before PR)
+git checkout main
+git pull origin main                     # Get latest changes from main
+git checkout feature/mailing-feature
+git merge main                           # Merge main into feature branch
+
+Merging Feature & Pushing to Deploy
+
+git checkout main
+git merge feature/mailing-feature        # Merge feature into main
+git push origin main                     # Push main to GitHub
+git push heroku main                     # Deploy to Heroku
+
+git push origin feature/mailing-feature
+git push heroku feature/mailing-feature:main
+
+git push origin mapsrunwaypage
+git push heroku mapsrunwaypage:main
+
+git push origin mobileupdate
+git push heroku mobileupdate:main
+
+git push origin main                
+git push heroku main 
+
+Removing Secrets From Git History (with BFG)
+
+brew install bfg                         # Install BFG cleaner
+
+# Remove a file from all git history
+bfg --delete-files your-secret-keyfile
+# Or remove by pattern
+bfg --delete-files '*.env'
+
+# After BFG, clean up git and force push:
+git reflog expire --expire=now --all
+git gc --prune=now --aggressive
+git push --force origin main
+
+
+
+Heroku
 
 heroku logs --tail --app projectrunway-api
 
 
-Here is my updated server.js.
-Why are we reorganizing everything? Does the order matter??
+MJML Email Preview
 
-the app.use() was going to have a try and catch to enure errors catching.
+npx mjml email-templates/confirmation.mjml -o preview.html
+open preview.html                        
 
-// API: Contact Form /added try-catch for error handling
-try {
-  app.use('/api/contact', require('./routes/contact'));
-} catch (err) {
-  console.error('Failed to load /api/contact:', err);
-}
 
-We are not using this!
-app.use(express.static(path.join(__dirname,'public')));
+API Testing
 
-Why isnt this on your code? 
-// request logger
-console.log('Starting server.js');
-app.use((req, res, next) => {
-  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
-  next();
-});
+curl -X POST https://projectrunway-api-b99afb2eca22.herokuapp.com/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Francisco",
+    "email": "i.ostolaza87@gmail.com",
+    "message": "I want to receive emails"
+  }'
 
-We need to ensure consitency and not keep changing stuff everyquery. 
-Things can always change. I need you to review the history chats, to ensure consistency.
-One task is to review all this chat, and all of website design for projectrunway.
+curl -X POST https://projectrunway-api-b99afb2eca22.herokuapp.com/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Jeongyoon",
+    "email": "jeongyoonchoi20@gmail.com",
+    "message": "안녕하세요! This is a test of the email system with a Korean name and Gmail address."
+  }'
 
-You will also review documentition and stackoverflow to find relevant problems. 
+curl -X POST https://projectrunway-api-b99afb2eca22.herokuapp.com/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Gil",
+    "email": "punto28pe@hotmail.com",
+    "message": "I want to receive emails"
+  }'
 
-below is my server.js code. Review. Make any changes that are consitent. 
 
-Lets proceed with stage, commit, push, and heroku logs checks. 
+curl -X POST https://projectrunway-api-b99afb2eca22.herokuapp.com/unsubscribe \
+  -H "Content-Type: application/json" \
+  -d '{"email": "neo.carbon@gmail.com"}'
+
+node server.js
+
+Open your browser.
+
+Go to:
+
+Home: http://localhost:5001/
+
+About: http://localhost:5001/about/
+
+Contact: http://localhost:5001/contact/
+
+Runway: http://localhost:5001/runway/
+
+Terms: http://localhost:5001/terms/
+
+http://localhost:5001/email/unsubscribe.html
+
+http://localhost:5001/map/
