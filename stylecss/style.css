@@ -290,7 +290,6 @@
     }
   
   /* ===== ABOUT PAGE ===== */
-
    .about-section {
     background: url('../assets/hanokvillage.jpeg') center/cover no-repeat fixed;
     min-height: 100vh;
@@ -306,7 +305,13 @@
     max-width: 660px;
     width: 90vw;
     margin: 0 auto;
-    
+  }
+  .about-section .about-content {
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.5); 
+    margin-left: 3rem;
+    border-radius: 6px;
+    max-width: 600px;
   }
   .about-content h2 {
     font-size: 2.5rem;
@@ -315,7 +320,12 @@
   .about-content p {
     font-size: 1.1rem;
   }
-  
+  .desktop-only {
+    display: block;
+  }
+  .mobile-only {
+    display: none;
+  }
   .history-section {
     background: var(--color-grey);
     min-height: 100vh;         
@@ -324,7 +334,6 @@
     justify-content: flex-start;
     padding: 8rem 2rem;
   }
-  
   .purpose-section {
     background: var(--color-white);
     min-height: 100vh;
@@ -333,11 +342,9 @@
     justify-content: center;
     padding: 8rem 2rem;
   }
-  
   .purpose-content {
     text-align: left;    
   }
-  
   .purpose-content button {
     background: var(--color-gold);
     color: var(--color-navy);
@@ -349,12 +356,10 @@
     margin-top: 1.5rem;       
     transition: background 0.2s, color 0.2s;
   }
-  
   .purpose-content button:hover {
     background: var(--color-white);
     color: var(--color-navy);
   }
-  
   .history-content,
   .purpose-content {
     color: var(--color-navy);
@@ -363,11 +368,9 @@
     max-width: 660px;
     width: 90vw;            
   }
-  
   .purpose-content {
     text-align: left;
   }
-  
   .history-content h2,
   .purpose-content h2 {
     font-size: 2.5rem;
@@ -405,7 +408,6 @@
     .card-content {
       padding: 18px;
     }
-    
     .terms-main {
       display: flex;
       justify-content: center;
@@ -988,6 +990,130 @@
       .cta-section .contact-cta button {
         margin-bottom: 0;
       }
+
+        /* 1. WHAT WE DO (About) */
+  .about-section {
+    min-height: 20vh;
+    height: auto;
+    background: url('../assets/village-mobile.jpeg') center/cover no-repeat;
+    /* background-attachment: scroll;
+    background-size: cover;
+    min-height: auto;         
+    padding: 4rem 1rem;        
+    display: flex;
+    justify-content: center;    
+    align-items: center; */
+  }
+
+  /* .about-section .about-content {
+    display: none;
+    height: 100%;   
+    max-width: 80%;
+    padding-right: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.4);
+    padding: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 6px;
+  } */
+  /* .about-content {
+    display: none;
+    width: 100%;
+    max-width: 90vw;
+    background: rgba(0,0,0,0.5);
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+  } */
+  /* .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  } */
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    color: var(--color-white);
+    font-size: 1.6rem;
+    background: rgba(0,0,0,0.5);
+    text-align: left;
+    border-radius: 4px;
+    padding: 1rem 1rem;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
+  /* 2. HISTORY */
+  .history-section {
+    background: var(--color-grey);
+    min-height: auto;
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .history-content {
+    width: 100%;
+    max-width: 90vw;
+    min-height: 40vh;
+    height: auto;
+    /* background: var(--color-white); */
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: left;
+  }
+  .history-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+  .history-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* 3. PURPOSE */
+  .purpose-section {
+    background: var(--color-white);
+    min-height: auto;
+    padding: 4rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .purpose-content {
+    width: 100%;
+    min-height: 50vh;
+    height: auto;
+    max-width: 90vw;
+    padding: 1.5rem;
+    border-radius: 4px;
+    text-align: center;
+  }
+  .purpose-content h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .purpose-content p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  .purpose-content button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+  }
+
     
   }
   
