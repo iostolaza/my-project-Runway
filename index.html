@@ -9,43 +9,46 @@
 </head>
 <body class="main-page"> 
   <!-- NAV -->
-  <nav class="site-nav">
-    <button class="hamburger-icon" onclick="openSideNav()" aria-label="Open menu">&#9776;</button>
-    <div class="logo-container" id="logoContainer" tabindex="0">
+  <nav class="site-nav" role="navigation" aria-expanded="false">
+    <div id="hamburger" class="hamburger-icon" aria-label="Open menu">
+      &#9776;
+    </div>
+    <div id="logoContainer" class="logo-container" tabindex="0">
       <h1>myprojectRunway</h1>
     </div>
+
+    <!-- MOBILE DROPDOWN NAV (inside nav for top:100%) -->
+    <div class="mobile-dropdown-nav" id="mobileDropdown">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/runway/">Runway</a>
+      <a href="/terms/">Terms</a>
+    </div>
   </nav>
+
   <!-- SIDENAV (desktop) -->
   <div id="sideNav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
+    <div class="closebtn" onclick="closeSideNav()">&times;</div>
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/contact/">Contact</a>
     <a href="/runway/">Runway</a>
     <a href="/terms/">Terms</a>
   </div>
-  <!-- MOBILE DROPDOWN NAV -->
-  <div class="mobile-dropdown-nav" id="mobileDropdown">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-    <a href="/runway/">Runway</a>
-    <a href="/terms/">Terms</a>
-  </div>
-  
+
   <main>
     <!-- HERO -->
-    <section class="dynamic-bg-container">
+    <section class="dynamic-hero-section">
       <div class="hero-content">
         <h2>Welcome to myprojectRunway</h2>
         <p>Connecting fashion enthusiasts with the latest trends, gossip, and experts through our AI-driven platform.</p>
         <button onclick="location.href='/about/'">Learn More</button>
       </div>
     </section>
-    
 
     <!-- FEATURES -->
-    <section class="solutions-container">
+    <section class="solutions-section">
       <div class="ai-consulting">
         <h2>AI Trend Matching</h2>
         <p>Our algorithm curates personalized trend recommendations.</p>
@@ -58,12 +61,14 @@
       </div>
     </section>
 
-    <!-- CTA -->
-    <div class="contact-cta-container">
+      <!-- 4. CALL-TO-ACTION -->
+  <section class="cta-section">
+    <div class="contact-cta">
       <h2>Ready to Style?</h2>
       <p>Join myprojectRunway today.</p>
       <button onclick="location.href='/contact/'">Get in Touch</button>
     </div>
+  </section>
   </main>
 
   <!-- FOOTER -->

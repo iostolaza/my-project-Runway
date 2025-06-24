@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,25 +7,29 @@
   <title>Privacy Policy – myprojectRunway</title>
   <link rel="stylesheet" href="/stylecss/style.css" />
 </head>
-<body>
+<body class="terms-page">
   <!-- NAV -->
-  <nav class="site-nav">
-    <button class="hamburger-icon" onclick="openSideNav()" aria-label="Open menu">&#9776;</button>
-    <div class="logo-container" id="logoContainer" tabindex="0">
+  <nav class="site-nav" role="navigation" aria-expanded="false">
+    <div id="hamburger" class="hamburger-icon" aria-label="Open menu">
+      &#9776;
+    </div>
+    <div id="logoContainer" class="logo-container" tabindex="0">
       <h1>myprojectRunway</h1>
     </div>
+
+    <!-- MOBILE DROPDOWN NAV (inside nav for top:100%) -->
+    <div class="mobile-dropdown-nav" id="mobileDropdown">
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
+      <a href="/runway/">Runway</a>
+      <a href="/terms/">Terms</a>
+    </div>
   </nav>
-  <!-- Side Navigation for Desktop -->
+
+  <!-- SIDENAV (desktop) -->
   <div id="sideNav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav()">&times;</a>
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/contact/">Contact</a>
-    <a href="/runway/">Runway</a>
-    <a href="/terms/">Terms</a>
-  </div>
-  <!-- Mobile Dropdown -->
-  <div class="mobile-dropdown-nav" id="mobileDropdown">
+    <div class="closebtn" onclick="closeSideNav()">&times;</div>
     <a href="/">Home</a>
     <a href="/about/">About</a>
     <a href="/contact/">Contact</a>

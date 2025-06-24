@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nav &amp; Sidenav Test</title>
+  <style>
+    /* ===== VARIABLES & RESET ===== */
+    :root {
+      --color-navy:  #001f3f;
+      --color-grey:  #f0f0f0;
+      --color-white: #fff;
+    }
+    *, *::before, *::after {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: sans-serif;
+      background: var(--color-white);
+      min-height: 100vh;
+    }
+    a {
+      text-decoration: none;
+      color: var(--color-navy);
+    }
+
+    /* ===== DESKTOP NAV ===== */
+    .site-nav {
+      background: var(--color-navy);
+      color: var(--color-white);
+      height: 60px;
+      line-height: 60px;
+      padding: 0 16px;
+      position: relative;
+      text-align: center;
+      overflow: visible; 
+    }
+    .site-nav .hamburger-icon {
+      position: absolute;
+      left: 16px;
+      top: 0;
+      font-size: 24px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .site-nav h1 {
+      font-size: 1.25rem;
+      color: #fff;
+      margin: 0;
+    }
+
+    .sidenav {
+      position: fixed;
+      top: 60px; /* below desktop header */
+      left: 0;
+      width: 0;  /* closed by default */
+      height: calc(100vh - 60px);
+      background: var(--color-grey);
+      overflow-x: hidden;
+      transition: width 0.3s ease;
+      padding-top: 20px;
+      z-index: 500;
+    }
+    .sidenav .closebtn {
+      position: absolute;
+      top: 8px;
+      right: 16px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+    .sidenav a {
+      display: block;
+      padding: 8px 24px;
+      border-bottom: 1px solid #ccc;
+      color: var(--color-navy);
+    }
+
+    /* Hide mobile dropdown by default on desktop */
+    .mobile-dropdown-nav {
+      display: none;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer-content {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: clamp(44px,8vh,56px);
+      line-height: clamp(44px,8vh,56px);
+      text-align: center;
+      background: var(--color-grey);
+    }
+
+    /* ===== MOBILE OVERRIDES ===== */
+    @media (max-width: 600px) {
+      /* Header sizing & clipping */
+      .site-nav {
+        height: clamp(44px,15vh,80px);
+        line-height: clamp(44px,15vh,80px);
+        overflow: visible;
+      }
+      /* Remove hamburger on mobile */
+      .site-nav .hamburger-icon {
+        display: none;
+      }
+      /* Show dropdown container (collapsed by height) */
+      .mobile-dropdown-nav {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow-y: auto;
+        background: var(--color-white);
+        transition: max-height 0.3s ease;
+        text-align: center;
+        z-index: 1000;
+      }
+      /* Expanded state */
+      .mobile-dropdown-nav.open {
+        max-height: 60vh;
+      }
+      /* Link styles */
+      .mobile-dropdown-nav a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+        font-size: 1rem;
+      }
+      /* Hide desktop sidenav on mobile */
+      .sidenav {
+        top: 0;
+        width: 0 !important;
+      }
+      /* Hide hamburger if you still have an ID */
+      #hamburger {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="main-page">
+
+  <!-- NAV -->
+  <nav class="site-nav" role="navigation" aria-expanded="false">
+    <div id="hamburger" class="hamburger-icon" aria-label="Open menu">
+      &#9776;
+    </div>
+    <div id="logoContainer" class="logo-container" tabindex="0">
+      <h1>myprojectRunway</h1>
+    </div>
+
+    <!-- MOBILE DROPDOWN NAV (inside nav for top:100%) -->
+    <div class="mobile-dropdown-nav" id="mobileDropdown">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Runway</a>
+      <a href="#">Terms</a>
+    </div>
+  </nav>
+
+  <!-- SIDENAV (desktop) -->
+  <div id="sideNav" class="sidenav">
+    <div class="closebtn" onclick="closeSideNav()">&times;</div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Runway</a>
+    <a href="#">Terms</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main style="padding: 16px; margin-bottom: clamp(44px,8vh,56px);">
+    <h2>Welcome to myprojectRunway</h2>
+    <p>This is a test page for nav/dropdown/sidenav/footer behavior.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer-content">
+    <p>© 2025 myprojectRunway – All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Desktop sidenav
+    function openSideNav() {
+      document.getElementById("sideNav").style.width = "250px";
+      document.getElementById("mobileDropdown").classList.remove("open");
+    }
+    function closeSideNav() {
+      document.getElementById("sideNav").style.width = "0";
+    }
+
+    // Mobile dropdown
+    function toggleMobileNav() {
+      const dropdown = document.getElementById("mobileDropdown");
+      const isOpen   = dropdown.classList.toggle("open");
+      document.querySelector('.site-nav')
+              .setAttribute('aria-expanded', isOpen);
+    }
+
+    // Bind handlers to hamburger (desktop) or logo (mobile)
+    function setupNavHandlers() {
+      const logo      = document.getElementById("logoContainer");
+      const hamburger = document.getElementById("hamburger");
+
+      // Replace nodes to clear old listeners
+      const newLogo      = logo.cloneNode(true);
+      logo.parentNode.replaceChild(newLogo, logo);
+
+      let newHamburger = null;
+      if (hamburger) {
+        newHamburger = hamburger.cloneNode(true);
+        hamburger.parentNode.replaceChild(newHamburger, hamburger);
+      }
+
+      if (window.innerWidth > 600) {
+        // Desktop: show hamburger, bind it to openSideNav
+        if (newHamburger) {
+          newHamburger.style.display = "block";
+          newHamburger.addEventListener("click", openSideNav);
+        }
+        newLogo.style.cursor = "default";
+      } else {
+        // Mobile: hide hamburger, bind logo to toggleMobileNav
+        if (newHamburger) newHamburger.style.display = "none";
+        newLogo.style.cursor = "pointer";
+        newLogo.addEventListener("click", toggleMobileNav);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", setupNavHandlers);
+    window.addEventListener("resize", setupNavHandlers);
+  </script>
+</body>
+</html>
