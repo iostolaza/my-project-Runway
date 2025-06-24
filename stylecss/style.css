@@ -19,7 +19,7 @@ html, body {
     height: 100%;      
     margin: 0;
     padding: 0;
-    background: var(--color-grey);
+    background: var(--color-white);
     font-family: 'Open Sans', 'Lato', 'Roboto', sans-serif;
     /* change to ensure update */
 }
