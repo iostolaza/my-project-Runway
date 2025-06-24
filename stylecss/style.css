@@ -1114,7 +1114,105 @@
     border-radius: 4px;
   }
 
-    
+ /* ===== CONTACT PAGE (mobile) ===== */
+    /* 1. Swap in a lighter, scrollable banner */
+    .contact-page .location-selection-container {
+      min-height: 20vh;
+      height: auto;
+      background: url('../assets/eimage-mobile.jpeg') center/cover no-repeat;
+    }
+  
+    /* 2. Shrink & center the form section */
+    .form-section {
+      background: var(--color-grey);
+      min-height: 80vh;       /* roughly 80–90% of the viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertical centering */
+      align-items: center;     /* horizontal centering */
+      padding: 1rem;
+    }
+  
+    .contact-form-container {
+      background: var(--color-navy);
+      color: var(--color-white);
+      width: 90vw;            /* almost full width */
+      max-width: 400px;       /* don’t let it get too wide */
+      height: 65vh;           /* around 60–70% of screen height */
+      /* padding: 5rem 1rem; */
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* spread fields & button */
+    }
+    .contact-form-container h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .contact-form-container label {
+      font-size: 0.95rem;
+    }
+    .contact-form-container input,
+    .contact-form-container textarea {
+      font-size: 1rem;
+      padding: 0.5rem;
+    }
+    .contact-form-container button {
+      font-size: 1rem;
+      padding: 0.75rem 1.25rem;
+    }
+  
+    /* 3. Stack address + map under each other */
+    .contact-and-map-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--color-white);
+      width: 100vw;
+      padding: 1rem 0;
+      gap: 1.5rem;
+    }
+    /* .contact-details,
+    .map {
+      width: 90vw;
+      max-width: 400px;
+      padding: 1rem;
+      background: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    } */
+    .contact-details {
+      width: 90vw;
+      max-width: 400px;
+      height: auto;
+      min-height: 60vh;
+      border: none;         /* remove side border on mobile */
+      text-align: center;
+      border-bottom: 1px solid var(--color-grey);
+
+    }
+    .contact-details h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-details p,
+    .contact-details a {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+    .map {
+      height: auto;
+      min-height: 50vh;
+      overflow: hidden;
+      width: 90vw;
+      max-width: 400px;
+    }
+    #map-canvas {
+      height: 100%;
+      width: 100%;
+    }
+
   }
   
   
