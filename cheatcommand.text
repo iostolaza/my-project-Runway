@@ -5,7 +5,7 @@ git add .                                 # Stage all changes
 git add server.js package.json package-lock.json    # Or stage selected files
 
 
-git commit -m "Update to css code structure before merging to main"
+git commit -m "map adjustments"
 
 Branching
 
