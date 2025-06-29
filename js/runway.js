@@ -66,6 +66,7 @@ collections.forEach((col, colIdx) => {
     </div>
   `;
   track.appendChild(card);
+  track.scrollLeft = 0;
 });
 
 // Inner carousel logic for each card
@@ -95,6 +96,62 @@ document.querySelector('.carousel-arrow.left').onclick = () => {
 document.querySelector('.carousel-arrow.right').onclick = () => {
   track.scrollBy({ left: scrollPx, behavior: 'smooth' });
 };
+
+document.querySelectorAll('.highlight-img').forEach(img => {
+  img.addEventListener('click', function () {
+    document.getElementById('highlightModalImg').src = this.src;
+    document.getElementById('highlightModal').style.display = 'flex';
+  });
+});
+document.querySelector('.modal-close').onclick = function () {
+  document.getElementById('highlightModal').style.display = 'none';
+};
+document.querySelector('.modal-bg').onclick = function () {
+  document.getElementById('highlightModal').style.display = 'none';
+};
+
+// --- Modal Logic for Viewing Full Collection ---
+let currentModalCol = null, currentModalIdx = 0;
+
+document.querySelectorAll('.carousel-card').forEach((card, i) => {
+  card.addEventListener('click', function (e) {
+    // Only trigger if clicking OUTSIDE the inner-carousel arrows
+    if (e.target.classList.contains('inner-arrow')) return;
+    openCollectionModal(i, 0);
+  });
+});
+
+function openCollectionModal(colIdx, imgIdx) {
+  const col = collections[colIdx];
+  currentModalCol = colIdx;
+  currentModalIdx = imgIdx;
+  document.getElementById('collectionModal').style.display = 'flex';
+  updateCollectionModal();
+}
+function updateCollectionModal() {
+  const col = collections[currentModalCol];
+  const img = col.images[currentModalIdx];
+  document.getElementById('collectionModalImg').src = img.src;
+  document.querySelector('.collection-modal-caption').textContent = img.desc;
+  document.getElementById('collectionModalCount').textContent =
+    `${currentModalIdx + 1} / ${col.images.length}`;
+}
+document.getElementById('collectionModalPrev').onclick = function () {
+  const col = collections[currentModalCol];
+  currentModalIdx = (currentModalIdx - 1 + col.images.length) % col.images.length;
+  updateCollectionModal();
+};
+document.getElementById('collectionModalNext').onclick = function () {
+  const col = collections[currentModalCol];
+  currentModalIdx = (currentModalIdx + 1) % col.images.length;
+  updateCollectionModal();
+};
+document.querySelector('#collectionModal .modal-close').onclick =
+  document.querySelector('#collectionModal .modal-bg').onclick = function () {
+    document.getElementById('collectionModal').style.display = 'none';
+};
+
+
 
 // Initialize Firebase (replace with your config)
 // const firebaseConfig = {
