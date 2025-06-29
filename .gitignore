@@ -20,4 +20,6 @@ Thumbs.db
 .vscode/
 
 # cheatcommand.txt
-/cheatcommand.text
+/textfiles/
+/textfiles/cheatcommand.text
+/textfiles/gpt-command.txt
