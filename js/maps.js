@@ -1,7 +1,6 @@
 
 // js/maps.js
 
-// /js/maps.js
 window.initMap = function () {
 
   const lat = 37.506296857302786;
@@ -12,13 +11,11 @@ window.initMap = function () {
   const dirFromUrl = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}`;
 
 
-  // Map appears inside the element with id 'map-canvas'
   const map = new google.maps.Map(document.getElementById("map-canvas"), {
     zoom: 17,
     center: companyLocation,
   });
 
-  // Marker: Use AdvancedMarkerElement if available, fallback otherwise
   let marker;
   if (google.maps.marker && google.maps.marker.AdvancedMarkerElement) {
     const { AdvancedMarkerElement } = google.maps.marker;
@@ -50,16 +47,11 @@ window.initMap = function () {
 
   const infowindow = new google.maps.InfoWindow({ content: infoContent });
 
-  // Open info window by default
   infowindow.open(map, marker);
 
-  // Also open info window when marker is clicked
   if (marker.addListener) {
     marker.addListener("click", () => infowindow.open(map, marker));
   } 
-  // else if (marker.addEventListener) {
-  //   marker.addEventListener("click", () => infowindow.open(map, marker));
-  // }
 
   google.maps.event.addListener(infowindow, 'domready', function() {
     const shareBtn = document.getElementById('shareBtn');

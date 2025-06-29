@@ -57,8 +57,6 @@ app.use('/runway', express.static('runway'));
 app.use('/about', express.static('about'));
 app.use('/contact', express.static('contact'));
 app.use('/email', express.static('email'));
-// app.use('/stylecss', express.static('stylecss'));
-// app.use('/js', express.static('js'));
 app.use('/assets', express.static('assets'));
 
 app.use('/stylecss', express.static(__dirname + '/stylecss'));
@@ -76,8 +74,6 @@ app.get('/about', (req, res) => res.redirect(302, 'https://myprojectrunway.com/a
 app.get('/runway', (req, res) => res.redirect(302, 'https://myprojectrunway.com/runway/'));
 app.get('/terms', (req, res) => res.redirect(302, 'https://myprojectrunway.com/terms/'));
 
-
-// MONGODB + LISTEN
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -89,7 +85,6 @@ mongoose
     process.exit(1);
   });
 
-// GLOBAL ERROR HANDLER (last)
 app.use((err, req, res, next) => {
   console.error('Uncaught error:', err);
   res.status(500).json({ success: false, error: err.message || 'Internal Server Error' });

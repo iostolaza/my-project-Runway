@@ -1,7 +1,5 @@
 
 // /js/script.js
-// This script handles the navigation bar functionality for both desktop and mobile views.
-
 
    // Desktop sidenav
    function openSideNav() {
@@ -68,73 +66,3 @@ function updateFooterYear() {
 
 // Run on DOM ready
 document.addEventListener("DOMContentLoaded", updateFooterYear);
-
-
-
-// function openSideNav() {
-//   if (window.innerWidth > 600) { 
-//     document.getElementById("sideNav").style.width = "250px";
-//     // Also close mobile dropdown if open
-//     document.getElementById("mobileDropdown").classList.remove("open");
-//   }
-// }
-// function closeSideNav() {
-//   document.getElementById("sideNav").style.width = "0";
-// }
-
-// // Mobile dropdown (tap logo, only on mobile)
-// function toggleMobileNav() {
-//   // Only activate on mobile
-//   if (window.innerWidth <= 600) {
-//     const dropdown = document.getElementById("mobileDropdown");
-//     const expanded = dropdown.classList.toggle("open");
-
-//     const nav = document.querySelector('.site-nav');
-//     nav.setAttribute('aria-expanded', expanded);
-//     // Also close sidenav if open
-//     document.getElementById("sideNav").style.width = "0";
-//   }
-// }
-
-// // Event listeners setup
-// function setupNavHandlers() {
-//   const nav = document.querySelector('.site-nav');
-//   if (!nav) return; 
-//   // clear any old handlers
-//   nav.onclick = null;
-//   nav.onkeypress = null;
-
-//   if (window.innerWidth <= 600) {
-//     // mobile: tapping anywhere on header toggles dropdown
-//     nav.onclick = toggleMobileNav;
-//     nav.onkeypress = e => {
-//       if (e.key === 'Enter' || e.key === ' ') toggleMobileNav();
-//     };
-//   } else {
-//     // desktop: clicking header opens sideNav
-//     nav.onclick = openSideNav;
-//   }
-
-//   // Hamburger icon: hide on mobile, show on desktop
-//   const hamburger = document.querySelector('.hamburger-icon');
-//   if (hamburger) {
-//     hamburger.style.display = window.innerWidth <= 600 ? 'none' : 'block';
-//   }
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   setupNavHandlers();
-//   document.querySelectorAll('.mobile-dropdown-nav a').forEach(link => {
-//     link.onclick = () => {
-//       document.getElementById("mobileDropdown").classList.remove("open");
-//     };
-//   });
-// });
-
-// window.addEventListener('resize', setupNavHandlers);
-
-// // Optional: nav scroll effect
-// window.addEventListener('scroll', () => {
-//   document.querySelector('.site-nav')
-//     .classList.toggle('scrolled', window.pageYOffset > 0);
-// });

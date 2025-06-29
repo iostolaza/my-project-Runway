@@ -6,7 +6,7 @@ const router = express.Router();
 const UnsubscribedEmail = require('../models/UnsubscribedEmail');
 const path = require('path');
 
-// POST: Handle form submission, save to MongoDB
+
 router.post('/', async (req, res) => {
   const { email } = req.body;
   if (!email) return res.status(400).json({ success: false, error: 'No email provided.' });
@@ -44,7 +44,7 @@ router.get('/', async (req, res) => {
     res.status(500).send('Server error.');
   }
 } else {
-  // Show the form if no email in query
+
   res.sendFile(require('path').resolve(__dirname, '../email/unsubscribe.html'));
   }
 });

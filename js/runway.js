@@ -195,5 +195,3 @@ document.querySelector('#collectionModal .modal-close').onclick =
 //   }
 // }
 
-// Place this inside a <script> tag after your HTML, or in an external JS file
-

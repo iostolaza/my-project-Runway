@@ -11,7 +11,6 @@ const renderMjmlTemplate = require('../utils/renderMjmlTemplate');
 const UnsubscribedEmail = require('../models/UnsubscribedEmail');
 const path = require('path');
 
-// Setup Zoho SMTP transporter
 const transporter = nodemailer.createTransport({
   host:   'smtp.zoho.com',
   port:   465,
@@ -22,14 +21,13 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-// Email function
 async function sendConfirmationEmail(name, email) {
   const isUnsubscribed = await UnsubscribedEmail.findOne({ email });
   if (isUnsubscribed) {
     console.log(`[EMAIL] Not sending to unsubscribed: ${email}`);
     return;
   }
-   // Generate and send email
+
   const emailHtml = await renderMjmlTemplate(
     path.join(__dirname, '../email/confirmation.mjml'),
     { name }
@@ -42,7 +40,6 @@ async function sendConfirmationEmail(name, email) {
     });
 }
 
-// Contact form route
 router.post(
   '/',
   [

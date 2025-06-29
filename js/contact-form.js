@@ -1,7 +1,6 @@
 
 // public/js/contact-form.js
 
-// Determine API root by hostname
 const hostname = window.location.hostname;
 const API_ROOT = (
   hostname === 'myprojectrunway.com' ||
