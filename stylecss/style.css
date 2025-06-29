@@ -346,71 +346,71 @@ line-height: 1.6;
 
 /* ===== RUNWAY PAGE ===== */
 .runway-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 0 1.5rem;
+max-width: 1200px;
+margin: 0 auto;
+padding: 2.5rem 1.5rem 0 1.5rem;
 }
 .runway-section-title,
 .collections-title,
 .company-label  {
-  font-size: 1.1rem;
-  font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: 0.12em;
-  color: #444;
-  text-transform: uppercase;
-  margin-bottom: 1.1rem;
-  font-weight: 500;
-  text-align: left;
-  padding-left: 0;  
+font-size: 1.1rem;
+font-family: 'Roboto Condensed', sans-serif;
+letter-spacing: 0.12em;
+color: #444;
+text-transform: uppercase;
+margin-bottom: 1.1rem;
+font-weight: 500;
+text-align: left;
+padding-left: 0;  
 }
 .runway-section-title {
-    padding-bottom: 1rem;  
+padding-bottom: 1rem;  
 }
 
 .highlight-quote {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2.2rem;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 2.2rem;
 }
 .highlight-quote blockquote {
-  font-size: 1.6rem;
-  font-family: 'Garamond', 'PT Serif', 'Georgia', serif;
-  color: var(--color-navy);
-  padding: 1.1rem 2.2rem;
-  border-left: 5px solid var(--color-gold);
-  border-radius: 4px;
-  margin: 0;
-  font-style: italic;
-  text-align: center;
+font-size: 1.6rem;
+font-family: 'Garamond', 'PT Serif', 'Georgia', serif;
+color: var(--color-navy);
+padding: 1.1rem 2.2rem;
+border-left: 5px solid var(--color-gold);
+border-radius: 4px;
+margin: 0;
+font-style: italic;
+text-align: center;
 
 }
 .runway-highlights,
 .runway-inspire {
-  max-width: 700px;
-  margin: 0 auto 3rem auto;
-  padding: 2rem 1.2rem;
-  border-radius: 18px;
+max-width: 700px;
+margin: 0 auto 3rem auto;
+padding: 2rem 1.2rem;
+border-radius: 18px;
 }
 
 .highlights-images-masonry {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  width: 100%;
-  max-width: 700px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: flex-end;
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+width: 100%;
+max-width: 700px;
+margin: 0 auto;
+justify-content: center;
+align-items: flex-end;
 }
 
 .highlight-img {
-  border-radius: 0;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-  margin: 0;
-  transition: box-shadow 0.2s;
-  object-fit: cover;
-  background: #fff;
+border-radius: 0;
+box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+margin: 0;
+transition: box-shadow 0.2s;
+object-fit: cover;
+background: #fff;
 }
 
 .img-1x   { width: 150px; height: 180px; }
@@ -418,145 +418,145 @@ line-height: 1.6;
 .img-2x   { width: 300px; height: 200px; }
 
 .highlight-img:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+box-shadow: 0 8px 24px rgba(0,0,0,0.13);
 }
 .runway-inspire {
-  max-width: 700px;
-  margin: 2rem auto 3rem auto;
-  padding: 4rem 2.5rem; 
-  min-height: 495px; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-shadow: none;   
-  border-radius: 20px;
+max-width: 700px;
+margin: 2rem auto 3rem auto;
+padding: 4rem 2.5rem; 
+min-height: 495px; 
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-shadow: none;   
+border-radius: 20px;
 }
 
 .inspire-quote {
-  font-size: 3.2rem;
-  font-family: 'Garamond', 'PT Serif', 'Georgia', serif;
-  color: var(--color-navy);
-  line-height: 1.14;
-  font-weight: 700;
-  margin: 0;
+font-size: 3.2rem;
+font-family: 'Garamond', 'PT Serif', 'Georgia', serif;
+color: var(--color-navy);
+line-height: 1.14;
+font-weight: 700;
+margin: 0;
 }
 .runway-collections {
-  margin-top: 3rem;
-  padding: 4.5rem 0 4.5rem 0;
-  background: transparent;
+margin-top: 3rem;
+padding: 4.5rem 0 4.5rem 0;
+background: transparent;
 }
 .collections-title {
-  font-size: 1.1rem;
-  font-family: 'Roboto Condensed', sans-serif;
-  letter-spacing: 0.12em;
-  color: #444;
-  text-transform: uppercase;
-  margin-bottom: 1.1rem;
-  font-weight: 500;
-  text-align: left;
-  padding-left: 70px;
+font-size: 1.1rem;
+font-family: 'Roboto Condensed', sans-serif;
+letter-spacing: 0.12em;
+color: #444;
+text-transform: uppercase;
+margin-bottom: 1.1rem;
+font-weight: 500;
+text-align: left;
+padding-left: 70px;
 }
 .collections-carousel {
-  display: flex;
-  align-items: center;
-  position: relative;
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
+display: flex;
+align-items: center;
+position: relative;
+gap: 1.5rem;
+max-width: 1000px;
+margin: 0 auto;
 }
 .carousel-arrow {
-  background: rgba(0,0,0,0.06);
-  border: none;
-  color: var(--color-navy);
-  font-size: 2.2rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+background: rgba(0,0,0,0.06);
+border: none;
+color: var(--color-navy);
+font-size: 2.2rem;
+width: 44px;
+height: 44px;
+border-radius: 50%;
+cursor: pointer;
+transition: background 0.2s, color 0.2s;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 .carousel-arrow:hover {
-  background: var(--color-gold);
-  color: #fff;
+background: var(--color-gold);
+color: #fff;
 }
 .carousel-arrow.in-card {
-  width: 36px;
-  height: 36px;
-  font-size: 1.5rem;
-  background: #f0f0f0;
-  color: var(--color-navy);
-  border-radius: 4px;
-  margin: 0 8px;
-  transition: background 0.2s;
+width: 36px;
+height: 36px;
+font-size: 1.5rem;
+background: #f0f0f0;
+color: var(--color-navy);
+border-radius: 4px;
+margin: 0 8px;
+transition: background 0.2s;
 }
 .carousel-arrow.in-card:hover {
-  background: var(--color-gold);
-  color: #fff;
+background: var(--color-gold);
+color: #fff;
 }
 .collections-track {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  flex: 1;
-  padding: 0.5rem 0;
+display: flex;
+gap: 2rem;
+overflow-x: auto;
+scroll-behavior: smooth;
+flex: 1;
+padding: 0.5rem 0;
 }
 .collection-card {
-  flex: 0 0 340px;
-  max-width: 340px;
-  min-width: 260px;
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  transition: box-shadow 0.2s;
+flex: 0 0 340px;
+max-width: 340px;
+min-width: 260px;
+background: #fff;
+border-radius: 4px;
+box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+overflow: hidden;
+display: flex;
+flex-direction: column;
+margin-bottom: 1rem;
+transition: box-shadow 0.2s;
 }
 .collection-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 0;
+width: 100%;
+height: 220px;
+object-fit: cover;
+border-radius: 0;
 }
 .card-info {
-  padding: 1.2rem 1rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+padding: 1.2rem 1rem 1rem 1rem;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 .card-info h3 {
-  margin: 0 0 0.4rem 0;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-navy);
-  font-family: 'Roboto Condensed', sans-serif;
-  text-align: left;
+margin: 0 0 0.4rem 0;
+font-size: 1.1rem;
+font-weight: 700;
+color: var(--color-navy);
+font-family: 'Roboto Condensed', sans-serif;
+text-align: left;
 }
 .card-info p {
-  font-size: 0.98rem;
-  color: #555;
-  margin: 0;
-  min-height: 48px;
-  text-align: left;
+font-size: 0.98rem;
+color: #555;
+margin: 0;
+min-height: 48px;
+text-align: left;
 }
 .collection-arrows {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 0.6rem;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 1rem;
+gap: 0.6rem;
 }
 .img-count {
-  font-size: 1rem;
-  color: #444;
-  min-width: 58px;
-  display: inline-block;
-  text-align: center;
+font-size: 1rem;
+color: #444;
+min-width: 58px;
+display: inline-block;
+text-align: center;
 }
 
 /* ===== CONTACT PAGE ===== */
@@ -1252,141 +1252,140 @@ margin-top: 1rem;
 
 /* ===== RUNWAY PAGE: MOBILE ===== */
 
-  .runway-main {
-    padding: 1.1rem 0.4rem 0 0.4rem;
-    max-width: 100vw;
-  }
-  /* Titles: Section, Collection, Company */
-  .runway-section-title,
-  .collections-title,
-  .company-label {
-    font-size: 1.15rem;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-    margin-bottom: 1.5rem;
-    text-align: left;
-    line-height: 1.2;
-    word-break: break-word;
-  }
-  /* Section 1: Highlights masonry mobile */
-  .runway-highlights {
-    max-width: 100vw;
-    padding: 1rem 0.4rem 1.6rem 0.4rem;
-    border-radius: 0;
-    margin-bottom: 2.2rem;
-  }
-  .highlights-images-masonry {
-    gap: 0.7rem;
-    max-width: 100vw;
-    justify-content: flex-start;
-  }
-  .highlight-img {
-    border-radius: 0;
-    margin: 0;
-    width: 47vw !important;  
-    max-width: 98vw;
-    height: 32vw !important;  
-    min-height: 90px;
-  }
-  .img-2x { width: 98vw !important; height: 46vw !important; }
-  .img-1-5x { width: 72vw !important; height: 36vw !important; }
+.runway-main {
+padding: 1.1rem 0.4rem 0 0.4rem;
+max-width: 100vw;
+}
+/* Titles: Section, Collection, Company */
+.runway-section-title,
+.collections-title,
+.company-label {
+font-size: 1.15rem;
+padding-left: 0.7rem;
+padding-right: 0.7rem;
+margin-bottom: 1.5rem;
+text-align: left;
+line-height: 1.2;
+word-break: break-word;
+}
+/* Section 1: Highlights masonry mobile */
+.runway-highlights {
+max-width: 100vw;
+padding: 1rem 0.4rem 1.6rem 0.4rem;
+border-radius: 0;
+margin-bottom: 2.2rem;
+}
+.highlights-images-masonry {
+gap: 0.7rem;
+max-width: 100vw;
+justify-content: flex-start;
+}
+.highlight-img {
+border-radius: 0;
+margin: 0;
+width: 47vw !important;  
+max-width: 98vw;
+height: 32vw !important;  
+min-height: 90px;
+}
+.img-2x { width: 98vw !important; height: 46vw !important; }
+.img-1-5x { width: 72vw !important; height: 36vw !important; }
 
-  .highlight-quote {
-    margin-top: 1.7rem;
-    padding: 0 1.1rem;
-  }
-  .highlight-quote blockquote {
-    font-size: 1.1rem;
-    padding: 1rem 0.5rem;
-  }
+.highlight-quote {
+margin-top: 1.7rem;
+padding: 0 1.1rem;
+}
+.highlight-quote blockquote {
+font-size: 1.1rem;
+padding: 1rem 0.5rem;
+}
 
-  /* Section 2: Inspire (padding for mobile) */
-  .runway-inspire {
-    max-width: 100vw;
-    padding: 2.5rem 1rem 2.5rem 1rem;
-    border-radius: 0;
-    min-height: 360px;
-    box-shadow: none;
-    margin-bottom: 2.4rem;
-  }
-  .inspire-quote {
-    font-size: 1.45rem;
-    line-height: 1.3;
-    padding-right: 0.3rem;
-    padding-left: 0.3rem;
-    margin-top: 0.6rem;
-    word-break: break-word;
-  }
+/* Section 2: Inspire (padding for mobile) */
+.runway-inspire {
+max-width: 100vw;
+padding: 2.5rem 1rem 2.5rem 1rem;
+border-radius: 0;
+min-height: 360px;
+box-shadow: none;
+margin-bottom: 2.4rem;
+}
+.inspire-quote {
+font-size: 1.45rem;
+line-height: 1.3;
+padding-right: 0.3rem;
+padding-left: 0.3rem;
+margin-top: 0.6rem;
+word-break: break-word;
+}
 
-  /* Section 3: Collections */
-  .runway-collections {
-    padding: 2.2rem 0 2.7rem 0;
-    margin-top: 1.1rem;
-    background: transparent;
-  }
-  .collections-title {
-    font-size: 1.15rem;
-    padding-left: 0.8rem;
-    margin-bottom: 1.3rem;
-  }
-  .collections-carousel {
-    max-width: 100vw;
-    gap: 0.8rem;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-  }
-  .carousel-arrow {
-    width: 32px;
-    height: 32px;
-    font-size: 1.4rem;
-    margin: 0 2px;
-  }
-  .collections-track {
-    gap: 0.8rem;
-    padding: 0.2rem 0;
-  }
-  .collection-card {
-    min-width: 75vw;
-    max-width: 85vw;
-    border-radius: 3px;
-    margin-bottom: 0.5rem;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-  }
-  .collection-image {
-    height: 36vw;
-    min-height: 115px;
-    border-radius: 0;
-  }
-  .card-info {
-    padding: 0.8rem 0.5rem 0.9rem 0.5rem;
-    align-items: flex-start;
-  }
-  .card-info h3 {
-    font-size: 1.03rem;
-    margin-bottom: 0.45rem;
-    text-align: left;
-    padding-left: 0.2rem;
-  }
-  .card-info p {
-    font-size: 0.95rem;
-    min-height: 38px;
-    padding-left: 0.2rem;
-    text-align: left;
-  }
-  .collection-arrows {
-    gap: 0.3rem;
-    margin-top: 0.7rem;
-  }
-  .carousel-arrow.in-card {
-    width: 28px;
-    height: 28px;
-    font-size: 1.05rem;
-    margin: 0 4px;
-  }
-  .img-count {
-    font-size: 0.98rem;
-    min-width: 40px;
-  }
-
+/* Section 3: Collections */
+.runway-collections {
+padding: 2.2rem 0 2.7rem 0;
+margin-top: 1.1rem;
+background: transparent;
+}
+.collections-title {
+font-size: 1.15rem;
+padding-left: 0.8rem;
+margin-bottom: 1.3rem;
+}
+.collections-carousel {
+max-width: 100vw;
+gap: 0.8rem;
+padding-left: 0.2rem;
+padding-right: 0.2rem;
+}
+.carousel-arrow {
+width: 32px;
+height: 32px;
+font-size: 1.4rem;
+margin: 0 2px;
+}
+.collections-track {
+gap: 0.8rem;
+padding: 0.2rem 0;
+}
+.collection-card {
+min-width: 75vw;
+max-width: 85vw;
+border-radius: 3px;
+margin-bottom: 0.5rem;
+box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.collection-image {
+height: 36vw;
+min-height: 115px;
+border-radius: 0;
+}
+.card-info {
+padding: 0.8rem 0.5rem 0.9rem 0.5rem;
+align-items: flex-start;
+}
+.card-info h3 {
+font-size: 1.03rem;
+margin-bottom: 0.45rem;
+text-align: left;
+padding-left: 0.2rem;
+}
+.card-info p {
+font-size: 0.95rem;
+min-height: 38px;
+padding-left: 0.2rem;
+text-align: left;
+}
+.collection-arrows {
+gap: 0.3rem;
+margin-top: 0.7rem;
+}
+.carousel-arrow.in-card {
+width: 28px;
+height: 28px;
+font-size: 1.05rem;
+margin: 0 4px;
+}
+.img-count {
+font-size: 0.98rem;
+min-width: 40px;
+}
 
 }

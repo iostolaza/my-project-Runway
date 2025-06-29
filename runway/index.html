@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link
   href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Roboto&display=swap"
-  rel="stylesheet"
-/>  
+  rel="stylesheet"/>  
+  
   <title>Runway – myprojectRunway</title>
   <link rel="stylesheet" href="/stylecss/style.css" />
 </head>
@@ -21,7 +21,7 @@
       <h1>myprojectRunway</h1>
     </div>
 
-    <!-- MOBILE DROPDOWN NAV (inside nav for top:100%) -->
+    <!-- MOBILE DROPDOWN NAV -->
     <div class="mobile-dropdown-nav" id="mobileDropdown">
       <a href="/">Home</a>
       <a href="/about/">About</a>
@@ -43,48 +43,49 @@
   
 <main class="runway-main">
   <!-- Section 1: Modern Highlights -->
-  <section class="runway-highlights">
-    <h2 class="runway-section-title">Runway Highlights</h2>
-    <div class="highlights-images-masonry">
-      <!-- Example image sizes: -->
-      <img src="/assets/runway-assets/Modern-chain-white-suit.jpg" class="highlight-img img-1x" alt="">
-      <img src="/assets/runway-assets/Modern-friends-smiling.jpg" class="highlight-img img-1-5x" alt="">
-      <img src="/assets/runway-assets/Modern-man-eyes.jpg" class="highlight-img img-2x" alt="">
-      <img src="/assets/runway-assets/Modern-man-smile-fall.jpg" class="highlight-img img-1x" alt="">
-      <img src="/assets/runway-assets/Modern-redcar.jpg" class="highlight-img img-1x" alt="">
-      <img src="/assets/runway-assets/Modern-single-woman-model.jpg" class="highlight-img img-1-5x" alt="">
-      <img src="/assets/runway-assets/Modern-woman-laying.jpg" class="highlight-img img-2x" alt="">
-      <img src="/assets/runway-assets/Modern-woman-model-city.jpg" class="highlight-img img-1x" alt="">
-      <img src="/assets/runway-assets/Modern-woman-model-sitting.jpg" class="highlight-img img-1x" alt="">
-      <img src="/assets/runway-assets/Modern-woman-posing-NY.jpg" class="highlight-img img-1-5x" alt="">
-      <img src="/assets/runway-assets/Modern-women-indian.jpg" class="highlight-img img-2x" alt="">
-      <img src="/assets/runway-assets/Modern-women-sun-bathing.jpg" class="highlight-img img-1x" alt="">
-    </div>
-    <div class="highlight-quote">
-      <blockquote>“A modern view: find the new style”</blockquote>
-    </div>
-  </section>
+    <section class="runway-highlights">
+      <h2 class="runway-section-title">Runway Highlights</h2>
+      <div class="highlights-images-masonry">
+        <img src="/assets/runway-assets/Modern-chain-white-suit.jpg" class="highlight-img img-1x" alt="">
+        <img src="/assets/runway-assets/Modern-friends-smiling.jpg" class="highlight-img img-1-5x" alt="">
+        <img src="/assets/runway-assets/Modern-man-eyes.jpg" class="highlight-img img-2x" alt="">
+        <img src="/assets/runway-assets/Modern-man-smile-fall.jpg" class="highlight-img img-1x" alt="">
+        <img src="/assets/runway-assets/Modern-redcar.jpg" class="highlight-img img-1x" alt="">
+        <img src="/assets/runway-assets/Modern-single-woman-model.jpg" class="highlight-img img-1-5x" alt="">
+        <img src="/assets/runway-assets/Modern-woman-laying.jpg" class="highlight-img img-2x" alt="">
+        <img src="/assets/runway-assets/Modern-woman-model-city.jpg" class="highlight-img img-1x" alt="">
+        <img src="/assets/runway-assets/Modern-woman-model-sitting.jpg" class="highlight-img img-1x" alt="">
+        <img src="/assets/runway-assets/Modern-woman-posing-NY.jpg" class="highlight-img img-1-5x" alt="">
+        <img src="/assets/runway-assets/Modern-women-indian.jpg" class="highlight-img img-2x" alt="">
+        <img src="/assets/runway-assets/Modern-women-sun-bathing.jpg" class="highlight-img img-1x" alt="">
+      </div>
+      <div class="highlight-quote">
+        <blockquote>“A modern view: find the new style”</blockquote>
+      </div>
+    </section>
 
   <!-- Section 2: Inspiration -->
-  <section class="runway-inspire">
-    <span class="company-label">myprojectRunway</span>
-    <h2 class="inspire-quote">
-      We inspire to be the world’s most exceptional fashion leader!
-    </h2>
-  </section>
-
-  <!-- Section 3: Collections -->
-  <!-- <section class="runway-collections">
+    <section class="runway-inspire">
+      <span class="company-label">myprojectRunway</span>
+      <h2 class="inspire-quote">
+        We inspire to be the world’s most exceptional fashion leader!
+      </h2>
+    </section>
+    <section class="runway-collections">
     <h2 class="collections-title">Collections</h2>
     <div class="collections-carousel">
-      <button class="carousel-arrow left" aria-label="Prev">&#8249;</button>
+      <button class="carousel-arrow outer left" aria-label="Prev">&#8249;</button>
       <div class="collections-track">
-    
         <div class="collection-card" data-collection="nature">
           <img src="/assets/runway-assets/Nature-beach-overhead-DK.jpg" alt="" class="collection-image">
           <div class="card-info">
             <h3>Nature Collection</h3>
-            <p class="collection-desc">Serenity from beach to snowy Ukraine.</p>
+            <p class="collection-desc">Serenity, where land meets ocean</p>
+            <div class="collection-arrows">
+              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
+              <span class="img-count">1 / 4</span>
+              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
+            </div>
           </div>
         </div>
         <div class="collection-card" data-collection="global">
@@ -92,6 +93,11 @@
           <div class="card-info">
             <h3>Global Collection</h3>
             <p class="collection-desc">Native fashion from Peru.</p>
+            <div class="collection-arrows">
+              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
+              <span class="img-count">1 / 4</span>
+              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
+            </div>
           </div>
         </div>
         <div class="collection-card" data-collection="modern">
@@ -99,6 +105,11 @@
           <div class="card-info">
             <h3>Modern Collection</h3>
             <p class="collection-desc">Modern beach style.</p>
+            <div class="collection-arrows">
+              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
+              <span class="img-count">1 / 4</span>
+              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
+            </div>
           </div>
         </div>
         <div class="collection-card" data-collection="street">
@@ -106,6 +117,11 @@
           <div class="card-info">
             <h3>Street Collection</h3>
             <p class="collection-desc">Parisian cafes and street life.</p>
+            <div class="collection-arrows">
+              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
+              <span class="img-count">1 / 4</span>
+              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
+            </div>
           </div>
         </div>
         <div class="collection-card" data-collection="wedding">
@@ -113,85 +129,17 @@
           <div class="card-info">
             <h3>Wedding Collection</h3>
             <p class="collection-desc">Romantic engagement moments.</p>
+            <div class="collection-arrows">
+              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
+              <span class="img-count">1 / 4</span>
+              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
+            </div>
           </div>
         </div>
       </div>
-      <button class="carousel-arrow right" aria-label="Next">&#8250;</button>
+      <button class="carousel-arrow outer right" aria-label="Next">&#8250;</button>
     </div>
-  </section> -->
-
-  <section class="runway-collections">
-  <h2 class="collections-title">Collections</h2>
-  <div class="collections-carousel">
-    <button class="carousel-arrow outer left" aria-label="Prev">&#8249;</button>
-    <div class="collections-track">
-      <!-- NATURE -->
-      <div class="collection-card" data-collection="nature">
-        <img src="/assets/runway-assets/Nature-beach-overhead-DK.jpg" alt="" class="collection-image">
-        <div class="card-info">
-          <h3>Nature Collection</h3>
-          <p class="collection-desc">Serenity, where land meets ocean</p>
-          <div class="collection-arrows">
-            <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-            <span class="img-count">1 / 4</span>
-            <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-          </div>
-        </div>
-      </div>
-      <!-- Repeat the block below for each collection (global, modern, street, wedding) -->
-      <div class="collection-card" data-collection="global">
-        <img src="/assets/runway-assets/Global-Native-woman-PE.jpg" alt="" class="collection-image">
-        <div class="card-info">
-          <h3>Global Collection</h3>
-          <p class="collection-desc">Native fashion from Peru.</p>
-          <div class="collection-arrows">
-            <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-            <span class="img-count">1 / 4</span>
-            <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-          </div>
-        </div>
-      </div>
-      <!-- ...Modern, Street, Wedding (same structure, different data-collection)... -->
-      <div class="collection-card" data-collection="modern">
-        <img src="/assets/runway-assets/Modern-women-sun-bathing.jpg" alt="" class="collection-image">
-        <div class="card-info">
-          <h3>Modern Collection</h3>
-          <p class="collection-desc">Modern beach style.</p>
-          <div class="collection-arrows">
-            <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-            <span class="img-count">1 / 4</span>
-            <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-          </div>
-        </div>
-      </div>
-      <div class="collection-card" data-collection="street">
-        <img src="/assets/runway-assets/Street-cafe-FR.jpg" alt="" class="collection-image">
-        <div class="card-info">
-          <h3>Street Collection</h3>
-          <p class="collection-desc">Parisian cafes and street life.</p>
-          <div class="collection-arrows">
-            <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-            <span class="img-count">1 / 4</span>
-            <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-          </div>
-        </div>
-      </div>
-      <div class="collection-card" data-collection="wedding">
-        <img src="/assets/runway-assets/Wedding-couple-engagement.jpg" alt="" class="collection-image">
-        <div class="card-info">
-          <h3>Wedding Collection</h3>
-          <p class="collection-desc">Romantic engagement moments.</p>
-          <div class="collection-arrows">
-            <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-            <span class="img-count">1 / 4</span>
-            <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-arrow outer right" aria-label="Next">&#8250;</button>
-  </div>
-</section>
+  </section>
 </main>
 
   <!-- FOOTER -->

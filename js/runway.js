@@ -1,64 +1,49 @@
 
 // js/runway.js
 
-// Initialize Firebase (use your config)
-// const firebaseConfig = {
-//     apiKey: "YOUR-API-KEY",
-//     authDomain: "YOUR-PROJECT.firebaseapp.com",
-//     projectId: "YOUR-PROJECT-ID",
-//     storageBucket: "...",
-//     messagingSenderId: "...",
-//     appId: "..."
-//   };
-  
-//   firebase.initializeApp(firebaseConfig);
-//   const db = firebase.firestore();
-  
-//   async function loadFeatured() {
-//     const gallery = document.getElementById('featured-gallery');
-//     gallery.innerHTML = "Loading...";
-//     const snapshot = await db.collection('featured').get();
-//     gallery.innerHTML = '';
-//     snapshot.forEach(doc => {
-//       const data = doc.data();
-//       const card = document.createElement('div');
-//       card.className = 'runway-card';
-//       card.innerHTML = `
-//         <img src="${data.imgUrl}" alt="${data.title}" />
-//         <div class="card-content">
-//           <h3>${data.title}</h3>
-//           <p>${data.description}</p>
-//         </div>
-//       `;
-//       gallery.appendChild(card);
-//     });
-//   }
-  
-//   document.addEventListener('DOMContentLoaded', loadFeatured);
+// Initialize Firebase (replace with your config)
+const firebaseConfig = {
+  apiKey: "KEY",
+  authDomain: "PROJECT.firebaseapp.com",
+  projectId: "PROJECT-ID",
+  storageBucket: "PROJECT.appspot.com",
+  messagingSenderId: "MESSAGING-SENDER-ID",
+  appId: "APP-ID"
+};
 
-//   // /js/runway.js
-// import { getFirestore, collection, getDocs } from "firebase/firestore";
-// // ...initialize Firebase...
-// const db = getFirestore();
+// For script tags in the browser (no import), use window.firebase:
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-// async function loadFeaturedImages() {
-//   const snapshot = await getDocs(collection(db, "runway-featured"));
-//   const gallery = document.getElementById("featured-gallery");
-//   snapshot.forEach(doc => {
-//     const data = doc.data();
-//     const div = document.createElement("div");
-//     div.className = "runway-card";
-//     div.innerHTML = `
-//       <img src="${data.imageUrl}" alt="${data.title}">
-//       <div class="card-content">
-//         <h3>${data.title}</h3>
-//         <p>${data.caption || ""}</p>
-//       </div>
-//     `;
-//     gallery.appendChild(div);
-//   });
-// }
-// window.addEventListener('DOMContentLoaded', loadFeaturedImages);
+async function loadFeaturedGallery() {
+  const gallery = document.getElementById('featured-gallery');
+  if (!gallery) return;
+  gallery.innerHTML = "Loading...";
+
+  try {
+    const snapshot = await db.collection('featured').get();
+    gallery.innerHTML = '';
+    snapshot.forEach(doc => {
+      const data = doc.data();
+      const card = document.createElement('div');
+      card.className = 'runway-card';
+      card.innerHTML = `
+        <img src="${data.imgUrl || data.imageUrl}" alt="${data.title || ''}" />
+        <div class="card-content">
+          <h3>${data.title || ''}</h3>
+          <p>${data.description || data.caption || ''}</p>
+        </div>
+      `;
+      gallery.appendChild(card);
+    });
+    if (gallery.innerHTML === '') gallery.innerHTML = '<p>No featured items found.</p>';
+  } catch (err) {
+    gallery.innerHTML = `<p style="color:red;">Error loading gallery.</p>`;
+    console.error(err);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFeaturedGallery);
 
 const collectionsData = {
   nature: {
