@@ -7,7 +7,7 @@
   <link
   href="https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Roboto&display=swap"
   rel="stylesheet"/>  
-  
+
   <title>Runway – myprojectRunway</title>
   <link rel="stylesheet" href="/stylecss/style.css" />
 </head>
@@ -71,75 +71,18 @@
         We inspire to be the world’s most exceptional fashion leader!
       </h2>
     </section>
-    <section class="runway-collections">
-    <h2 class="collections-title">Collections</h2>
-    <div class="collections-carousel">
-      <button class="carousel-arrow outer left" aria-label="Prev">&#8249;</button>
-      <div class="collections-track">
-        <div class="collection-card" data-collection="nature">
-          <img src="/assets/runway-assets/Nature-beach-overhead-DK.jpg" alt="" class="collection-image">
-          <div class="card-info">
-            <h3>Nature Collection</h3>
-            <p class="collection-desc">Serenity, where land meets ocean</p>
-            <div class="collection-arrows">
-              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-              <span class="img-count">1 / 4</span>
-              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-            </div>
-          </div>
-        </div>
-        <div class="collection-card" data-collection="global">
-          <img src="/assets/runway-assets/Global-Native-woman-PE.jpg" alt="" class="collection-image">
-          <div class="card-info">
-            <h3>Global Collection</h3>
-            <p class="collection-desc">Native fashion from Peru.</p>
-            <div class="collection-arrows">
-              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-              <span class="img-count">1 / 4</span>
-              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-            </div>
-          </div>
-        </div>
-        <div class="collection-card" data-collection="modern">
-          <img src="/assets/runway-assets/Modern-women-sun-bathing.jpg" alt="" class="collection-image">
-          <div class="card-info">
-            <h3>Modern Collection</h3>
-            <p class="collection-desc">Modern beach style.</p>
-            <div class="collection-arrows">
-              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-              <span class="img-count">1 / 4</span>
-              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-            </div>
-          </div>
-        </div>
-        <div class="collection-card" data-collection="street">
-          <img src="/assets/runway-assets/Street-cafe-FR.jpg" alt="" class="collection-image">
-          <div class="card-info">
-            <h3>Street Collection</h3>
-            <p class="collection-desc">Parisian cafes and street life.</p>
-            <div class="collection-arrows">
-              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-              <span class="img-count">1 / 4</span>
-              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-            </div>
-          </div>
-        </div>
-        <div class="collection-card" data-collection="wedding">
-          <img src="/assets/runway-assets/Wedding-couple-engagement.jpg" alt="" class="collection-image">
-          <div class="card-info">
-            <h3>Wedding Collection</h3>
-            <p class="collection-desc">Romantic engagement moments.</p>
-            <div class="collection-arrows">
-              <button class="carousel-arrow in-card left" aria-label="Prev">&#8249;</button>
-              <span class="img-count">1 / 4</span>
-              <button class="carousel-arrow in-card right" aria-label="Next">&#8250;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-arrow outer right" aria-label="Next">&#8250;</button>
-    </div>
-  </section>
+
+  <!-- Section 3: Carousel Collections -->
+<section class="carousel-collection-section">
+  <div class="carousel-collection-title">Collections</div>
+  <div class="carousel-track-wrapper">
+    <button class="carousel-arrow left" aria-label="Prev">&#8249;</button>
+    <div class="carousel-track" id="carouselTrack"></div>
+    
+    <button class="carousel-arrow right" aria-label="Next">&#8250;</button>
+  </div>
+</section>
+
 </main>
 
   <!-- FOOTER -->
